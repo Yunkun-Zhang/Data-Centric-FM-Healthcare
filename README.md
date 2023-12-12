@@ -34,7 +34,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 ### Language Models
 
 | Model               | Subfield    | Paper                                                        | Code                                                         | Base    | Pre-Training Data    |
-| ------------------- | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------- | -------------------- |
+| :------------------ | :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :------ | :------------------- |
 | RadFM               | Radiology   | [Towards Generalist Foundation Model for Radiology](https://arxiv.org/abs/2308.02463) | [Github](https://chaoyi-wu.github.io/RadFM)                  | LLaMA   | MedMD                |
 | BioMedGPT           | Biomedicine | [BioMedGPT: Open Multimodal Generative Pre-trained Transformer for BioMedicine](https://arxiv.org/abs/2308.09442) | [Github](https://github.com/PharMolix/OpenBioMed)            | LLaMA 2 | S2ORC                |
 | Clinical LLaMA-LoRA | Clinic      | [Parameter-Efficient Fine-Tuning of LLaMA for the Clinical Domain](https://arxiv.org/abs/2307.03042) | -                                                            | LLaMA   | MIMIC-IV             |
@@ -55,7 +55,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 ### Vision Models
 
 | Model      | Subfield    | Paper                                                        | Code                                                         | Base   | Pre-Training Data   |
-| ---------- | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------ | ------------------- |
+| :--------- | :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----- | :------------------ |
 | REMEDIS    | Radiology   | [Robust and Data-Efficient Generalization of Self-Supervised Machine Learning for Diagnostic Imaging](https://idp.nature.com/authorize/casa?redirect_uri=https://www.nature.com/articles/s41551-023-01049-7&casa_token=jsWqfcJssI0AAAAA:zt3n5PYal2WyePCxeKXW4q4x0gmqtWQYHCLqXbLQhK1ERML3pgp68Q7GBN1wVK9MYP5iyxBzlsaD1Tygag) | [Github](https://github.com/google-research/medical-ai-research-foundations) | SimCLR | MIMIC-IV + CheXpert |
 | Virchow    | Pathology   | [Virchow: A Million-Slide Digital Pathology Foundation Model](https://arxiv.org/abs/2309.07778) | -                                                            | DINOv2 | Virchow             |
 | RETFound   | Retinopathy | [A Foundation Model for Generalizable Disease Detection from Retinal Images](https://www.nature.com/articles/s41586-023-06555-x) | [Github](https://github.com/rmaphoh/RETFound_MAE)            | MAE    | RETFound            |
@@ -65,7 +65,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 ### Vision-Language Models
 
 | Model        | Subfield    | Paper                                                        | Code                                                         | Base     | Pre-Training Data    |
-| ------------ | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ | -------- | -------------------- |
+| :----------- | :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :------- | :------------------- |
 | RadFM        | Radiology   | [Towards Generalist Foundation Model for Radiology](https://arxiv.org/abs/2308.02463) | [Github](https://github.com/chaoyi-wu/RadFM)                 | -        | MedMD                |
 | KAD          | Radiology   | [Knowledge-Enhanced Visual-Language Pre-Training on Chest Radiology Images](https://www.nature.com/articles/s41467-023-40260-7) | [Github](https://github.com/xiaoman-zhang/KAD)               | CLIP     | MIMIC-CXR + UMLS     |
 | Med-Flamingo | Medicine    | [Med-Flamingo: A Multimodal Medical Few-Shot Learner](https://proceedings.mlr.press/v225/moor23a.html) | [Github](https://github.com/snap-stanford/med-flamingo)      | Flamingo | MTB + PMC-OA         |
@@ -84,7 +84,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 ### Protein Models
 
 | Model         | Subfield   | Paper                                                        | Code                                                         | Base        | Pre-Training Data |
-| ------------- | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------- | ----------------- |
+| :------------ | :--------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :---------- | :---------------- |
 | AlphaMissense | Proteomics | [Accurate Proteome-Wide Missense Variant Effect Prediction with AlphaMissense](https://www.science.org/doi/abs/10.1126/science.adg7492) | [Github](https://github.com/deepmind/alphamissense)          | AlphaFold   | PDB + UniRef      |
 | GET           | Genomics   | [GET: A Foundation Model of Transcription across Human Cell Types](https://www.biorxiv.org/content/10.1101/2023.09.24.559168.abstract) | [Huggingface](https://huggingface.co/spaces/get-foundation/getdemo) | Transformer | GET               |
 | ESM-2         | Proteomics | [Evolutionary-Scale Prediction of Atomic-Level Protein Structure with a Language Model](https://www.science.org/doi/abs/10.1126/science.ade2574?casa_token=Qvgo8ZWhDYwAAAAA:SbKFf-TJQHVPNS_peeNUOoKxnsYgvp-0PMaPG1Oh5zGLrs1zdoSJBTe_qDl4n9loA7-RFE5GDJ2_kIA) | [Github](https://github.com/facebookresearch/esm)            | Transformer | UniRef            |
@@ -97,7 +97,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 ### Text
 
 | Dataset (Paper)                                              | Description                                                  | Link                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
 | Huatuo-26M ([arXiv](https://arxiv.org/abs/2305.01526))       | 26M Chinese medical QA pairs                                 | [Github](https://github.com/FreedomIntelligence/Huatuo-26M)  |
 | Medical Meadow ([arXiv](https://arxiv.org/abs/2304.08247))   | 16M medical QA pairs collected from 9 sources                | -                                                            |
 | MultiMedQA ([Nature](https://www.nature.com/articles/s41586-023-06291-2)) | 6 existing and 1 online-collected medical QA dataset         | [Nature](https://www.nature.com/articles/s41586-023-06291-2#data-availability) |
@@ -115,7 +115,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 ### Imaging
 
 | Dataset (Paper)                                              | Description                                                  | Link                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
 | RETFound ([Nature](https://www.nature.com/articles/s41586-023-06555-x)) | Unannotated retinal images, containing 904,170 CFPs and 736,442 OCT scans | [Nature](https://www.nature.com/articles/s41586-023-06555-x#data-availability) |
 | AbdomenAtlas-8K ([arXiv](https://arxiv.org/abs/2305.09666))  | 8,448 CT volumes with per-voxel annotated eight abdominal organs | [Github](https://github.com/MrGiovanni/AbdomenAtlas)         |
 | Med-MNIST v2 ([Nature](https://www.nature.com/articles/s41597-022-01721-8)) | 12 2D and 6 3D datasets for biomedical image classification  | [Official cite](https://medmnist.com/)                       |
@@ -129,7 +129,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 ### Genomics
 
 | Dataset (Paper)                                              | Description                                                  | Link                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
 | 1000 Genomes Project ([Nature](https://www.nature.com/articles/nature15393)) | A comprehensive catalog of human genetic variations          | [Official cite](https://www.internationalgenome.org/)        |
 | ENCODE ([Nature](https://www.nature.com/articles/nature11247)) | A platform of genomics data and encyclopedia with integrative-level and ground-level annotations | [NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3439153/) |
 | dbSNP ([NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC29783/)) | A collection of human single nucleotide variations, microsatellites, and small-scale insertions and deletions | [NIH](https://pubmed.ncbi.nlm.nih.gov/11125122/)             |
@@ -137,7 +137,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 ### Drug
 
 | Dataset (Paper)                                              | Description                                                  | Link                                           |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ---------------------------------------------- |
+| :----------------------------------------------------------- | :----------------------------------------------------------- | :--------------------------------------------- |
 | PubChem ([NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9825602/)) | A collection of 900+ sources of chemical information data    | [NIH](https://pubchem.ncbi.nlm.nih.gov/)       |
 | DrugBank ([NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753335/)) | A web-enabled structured database of molecular information about drugs | [Official cite](https://www.drugbank.com/)     |
 | ChEMBL ([NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245175/)) | 20M bioactivity measurements for 2.4M distinct compounds and 15K protein targets | [Official cite](https://www.ebi.ac.uk/chembl/) |
@@ -145,7 +145,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 ### Mulit-Modal
 
 | Dataset (Paper)                                              | Description                                                  | Link                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
 | MedMD ([arXiv](https://arxiv.org/abs/2308.02463))            | 15.5M 2D scans and 180k 3D radiology scans  with textual descriptions | [Github](https://github.com/chaoyi-wu/RadFM)                 |
 | OpenPath ([Nature](https://www.nature.com/articles/s41591-023-02504-3)) | 208,414 pathology images paired with natural language descriptions | [Huggingface](https://huggingface.co/spaces/vinid/webplip)   |
 | Quilt-1M ([arXiv](https://arxiv.org/abs/2306.11207))         | 1M image-text pairs for histopathology                       | [Github](https://github.com/wisdomikezogwo/quilt1m)          |
