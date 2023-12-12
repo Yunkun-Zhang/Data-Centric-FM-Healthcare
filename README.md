@@ -1,0 +1,164 @@
+# Data-Centric Foundation Models in Healthcare
+
+A survey on data-centric foundation models in healthcare.
+
+**[Project [This Page]]()** | **[Paper]()**
+
+Last updated: 2023/12/12
+
+----
+
+In this repository, we provide an up-to-date list of healthcare-related foundation models, datasets, and data-centric strategies, which are also mentioned in our survey paper.
+
+**Contents**
+
+- [Healthcare and medical foundation models](#Healthcare and medical foundation models)
+    - [Language models](#Language Models)
+    - [Vision models](#Vision Models)
+    - [Vision-language models](#Vision-Language Models)
+    - [Protein models](#Protein Models)
+
+- [Datasets for foundation model](#Datasets for foundation model)
+    - Text
+    - Imaging
+    - Genomics
+    - Drug
+    - Multi-Modal
+
+- [Data-centric strategies](#Data-centric strategies)
+
+
+
+## Healthcare and Medical Foundation Models
+
+### Language Models
+
+| Model               | Subfield    | Paper                                                        | Code                                                         | Base    | Pre-Training Data    |
+| ------------------- | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------- | -------------------- |
+| RadFM               | Radiology   | [Towards Generalist Foundation Model for Radiology](https://arxiv.org/abs/2308.02463) | [Github](https://chaoyi-wu.github.io/RadFM)                  | LLaMA   | MedMD                |
+| BioMedGPT           | Biomedicine | [BioMedGPT: Open Multimodal Generative Pre-trained Transformer for BioMedicine](https://arxiv.org/abs/2308.09442) | [Github](https://github.com/PharMolix/OpenBioMed)            | LLaMA 2 | S2ORC                |
+| Clinical LLaMA-LoRA | Clinic      | [Parameter-Efficient Fine-Tuning of LLaMA for the Clinical Domain](https://arxiv.org/abs/2307.03042) | -                                                            | LLaMA   | MIMIC-IV             |
+| Med-PaLM 2          | Clinic      | [Towards Expert-Level Medical Question Answering with Large Language Models](https://arxiv.org/abs/2305.09617) | [Google](https://sites.research.google/med-palm/)            | PaLM 2  | MultiMedQA           |
+| PMC-LLaMA           | Medicine    | [PMC-LLaMA: Towards Building Open-source Language Models for Medicine](https://arxiv.org/abs/2304.14454) | [Github](https://github.com/chaoyi-wu/PMC-LLaMA)             | LLaMA   | MedC                 |
+| BenTsao (HuaTuo)    | Biomedicine | [HuaTuo: Tuning LLaMA Model with Chinese Medical Knowledge](https://arxiv.org/abs/2304.06975) | [Github](https://github.com/SCIR-HI/Huatuo-Llama-Med-Chinese) | LLaMA   | CMeKG                |
+| ChatDoctor          | Medicine    | [ChatDoctor: A Medical Chat Model Fine-Tuned on a Large Language Model Meta-AI (LLaMA) Using Medical Domain Knowledge](https://arxiv.org/abs/2303.14070) | [Github](https://github.com/Kent0n-Li/ChatDoctor)            | LLaMA   | HealthCareMagic-100k |
+| Clinical-T5         | Clinic      | [Clinical-T5: Large Language Models Built Using Mimic Clinical Text](https://www.physionet.org/content/clinical-t5/1.0.0/) | [PhysioNet](https://www.physionet.org/content/clinical-t5/1.0.0/) | T5      | MIMIC-III + MIMIC-IV |
+| Med-PaLM            | Clinic      | [Large Language Models Encode Clinical Knowledge](https://arxiv.org/abs/2212.13138) | [Google](https://sites.research.google/med-palm)             | PaLM    | MultiMedQA           |
+| BioGPT              | Biomedicine | [BioGPT: Generative Pre-Trained Transformer for Biomedical Text Generation and Mining](https://academic.oup.com/bib/article-abstract/23/6/bbac409/6713511) | [Github](https://github.com/microsoft/BioGPT)                | GPT-2   | PubMed               |
+| BioLinkBERT         | Biomedicine | [Linkbert: Pretraining Language Models with Document Links](https://arxiv.org/abs/2203.15827) | [Github](https://github.com/michiyasunaga/LinkBERT)          | BERT    | PubMed               |
+| PubMedBERT          | Biomedicine | [Domain-Specific Language Model Pretraining for Biomedical Natural Language Processing](https://arxiv.org/abs/2007.15779) | [Microsoft](https://microsoft.github.io/BLURB/models.html)   | BERT    | PubMed               |
+| BioBERT             | Biomedicine | [BioBERT: A Pre-Trained Biomedical Language Representation Model for Biomedical Text Mining](https://academic.oup.com/bioinformatics/article-abstract/36/4/1234/5566506) | [Github](https://github.com/naver/biobert-pretrained)        | BERT    | PubMed + PMC         |
+| BlueBERT            | Biomedicine | [An Empirical Study of Multi-Task Learning on BERT for Biomedical Text Mining](https://arxiv.org/abs/2005.02799) | [Github](https://github.com/ncbi-nlp/BLUE_Benchmark)         | BERT    | PubMed + MIMIC-III   |
+| Clinical BERT       | Clinic      | [Publicly Available Clinical BERT Embeddings](https://arxiv.org/abs/1904.03323) | [Github](https://github.com/EmilyAlsentzer/clinicalBERT)     | BERT    | MIMIC-III            |
+| SciBERT             | Biomedicine | [SciBERT: A Pretrained Language Model for Scientific Text](https://arxiv.org/abs/1903.10676) | [Github](https://github.com/allenai/scibert)                 | BERT    | Semantic Scholar     |
+
+### Vision Models
+
+| Model      | Subfield    | Paper                                                        | Code                                                         | Base   | Pre-Training Data   |
+| ---------- | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------ | ------------------- |
+| REMEDIS    | Radiology   | [Robust and Data-Efficient Generalization of Self-Supervised Machine Learning for Diagnostic Imaging](https://idp.nature.com/authorize/casa?redirect_uri=https://www.nature.com/articles/s41551-023-01049-7&casa_token=jsWqfcJssI0AAAAA:zt3n5PYal2WyePCxeKXW4q4x0gmqtWQYHCLqXbLQhK1ERML3pgp68Q7GBN1wVK9MYP5iyxBzlsaD1Tygag) | [Github](https://github.com/google-research/medical-ai-research-foundations) | SimCLR | MIMIC-IV + CheXpert |
+| Virchow    | Pathology   | [Virchow: A Million-Slide Digital Pathology Foundation Model](https://arxiv.org/abs/2309.07778) | -                                                            | DINOv2 | Virchow             |
+| RETFound   | Retinopathy | [A Foundation Model for Generalizable Disease Detection from Retinal Images](https://www.nature.com/articles/s41586-023-06555-x) | [Github](https://github.com/rmaphoh/RETFound_MAE)            | MAE    | RETFound            |
+| CTransPath | Pathology   | [Transformer-Based Unsupervised Contrastive Learning for Histopathological Image Classification](https://www.sciencedirect.com/science/article/pii/S1361841522002043?casa_token=YBbUxnv_qsAAAAAA:YrgecQ6ecLad4Bj3JfGl0SZvjRgSQBZ27KYtpH6jU3vy6j-8hGrnQzbVFWCg0vH9Pn7r5H1Cxw) | [Github](https://github.com/Xiyue-Wang/TransPath)            | -      | TCGA + PAIP         |
+| HIPT       | Pathology   | [Scaling Vision Transformers to Gigapixel Images via Hierarchical Self-Supervised Learning](https://openaccess.thecvf.com/content/CVPR2022/html/Chen_Scaling_Vision_Transformers_to_Gigapixel_Images_via_Hierarchical_Self-Supervised_Learning_CVPR_2022_paper.html?trk=public_post_comment-text) | [Github](https://github.com/mahmoodlab/HIPT)                 | DINO   | TCGA                |
+
+### Vision-Language Models
+
+| Model        | Subfield    | Paper                                                        | Code                                                         | Base     | Pre-Training Data    |
+| ------------ | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ | -------- | -------------------- |
+| RadFM        | Radiology   | [Towards Generalist Foundation Model for Radiology](https://arxiv.org/abs/2308.02463) | [Github](https://github.com/chaoyi-wu/RadFM)                 | -        | MedMD                |
+| KAD          | Radiology   | [Knowledge-Enhanced Visual-Language Pre-Training on Chest Radiology Images](https://www.nature.com/articles/s41467-023-40260-7) | [Github](https://github.com/xiaoman-zhang/KAD)               | CLIP     | MIMIC-CXR + UMLS     |
+| Med-Flamingo | Medicine    | [Med-Flamingo: A Multimodal Medical Few-Shot Learner](https://proceedings.mlr.press/v225/moor23a.html) | [Github](https://github.com/snap-stanford/med-flamingo)      | Flamingo | MTB + PMC-OA         |
+| CONCH        | Pathology   | [Towards a Visual-Language Foundation Model for Computational Pathology](https://arxiv.org/abs/2307.12914) | -                                                            | CoCa     | PubMed + PMC         |
+| QuiltNet     | Pathology   | [Quilt-1M: One Million Image-Text Pairs for Histopathology](https://arxiv.org/abs/2306.11207) | [Github](https://github.com/wisdomikezogwo/quilt1m)          | CLIP     | Quilt-1M             |
+| PLIP         | Pathology   | [A Visual-Language Foundation Model for Pathology Image Analysis Using Medical Twitter](https://idp.nature.com/authorize/casa?redirect_uri=https://www.nature.com/articles/s41591-023-02504-3&casa_token=cnEpAWMo9RIAAAAA:_v3_yKPcr_afGn_MCirdOLLHyC63vSFVuvqu2sM4lnxJaZVQF7gmZsEjP2-W-CTQ9Xr2OVOpQEjgdIf9Jw) | [Huggingface](https://huggingface.co/spaces/vinid/webplip)   | CLIP     | OpenPath             |
+| MI-Zero      | Pathology   | [Visual Language Pretrained Multiple Instance Zero-Shot Transfer for Histopathology Images](http://openaccess.thecvf.com/content/CVPR2023/html/Lu_Visual_Language_Pretrained_Multiple_Instance_Zero-Shot_Transfer_for_Histopathology_Images_CVPR_2023_paper.html) | [Github](https://github.com/mahmoodlab/MI-Zero)              | CLIP     | ARCH                 |
+| LLaVA-Med    | Biomedicine | [LLaVA-Med: Training a Large Language-and-Vision Assistant for Biomedicine in One Day](https://arxiv.org/abs/2306.00890) | [Github](https://github.com/microsoft/LLaVA-Med)             | LLaVA    | PMC-15M + GPT-4      |
+| MedVInT      | Biomedicine | [PMC-VQA: Visual Instruction Tuning for Medical Visual Question Answering](https://arxiv.org/abs/2305.10415) | [Github](https://github.com/xiaoman-zhang/PMC-VQA)           | -        | PMC-VQA              |
+| PMC-CLIP     | Biomedicine | [PMC-CLIP: Contrastive Language-Image Pre-Training Using Biomedical Documents](https://arxiv.org/abs/2303.07240) | [Github](https://github.com/WeixiongLin/PMC-CLIP)            | CLIP     | PMC-OA               |
+| BiomedCLIP   | Biomedicine | [Large-Scale Domain-Specific Pretraining for Biomedical Vision-Language Processing](https://arxiv.org/abs/2303.00915) | [Huggingface](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224) | CLIP     | PMC-15M              |
+| MedCLIP      | Medicine    | [MedCLIP: Contrastive Learning from Unpaired Medical Images and Text](https://arxiv.org/abs/2210.10163) | [Github](https://github.com/RyanWangZf/MedCLIP)              | CLIP     | CheXpert + MIMIC-CXR |
+| CheXzero     | Radiology   | [Expert-Level Detection of Pathologies from Unannotated Chest X-ray Images via Self-Supervised Learning](https://www.nature.com/articles/s41551-022-00936-9) | [Github](https://github.com/rajpurkarlab/CheXzero)           | CLIP     | MIMIC-CXR            |
+| PubMedCLIP   | Radiology   | [Does CLIP Benefit Visual Question Answering in the Medical Domain as Much as it Does in the General Domain?](https://arxiv.org/abs/2112.13906) | [Github](https://github.com/sarahESL/PubMedCLIP)             | CLIP     | ROCO                 |
+
+### Protein Models
+
+| Model         | Subfield   | Paper                                                        | Code                                                         | Base        | Pre-Training Data |
+| ------------- | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------- | ----------------- |
+| AlphaMissense | Proteomics | [Accurate Proteome-Wide Missense Variant Effect Prediction with AlphaMissense](https://www.science.org/doi/abs/10.1126/science.adg7492) | [Github](https://github.com/deepmind/alphamissense)          | AlphaFold   | PDB + UniRef      |
+| GET           | Genomics   | [GET: A Foundation Model of Transcription across Human Cell Types](https://www.biorxiv.org/content/10.1101/2023.09.24.559168.abstract) | [Huggingface](https://huggingface.co/spaces/get-foundation/getdemo) | Transformer | GET               |
+| ESM-2         | Proteomics | [Evolutionary-Scale Prediction of Atomic-Level Protein Structure with a Language Model](https://www.science.org/doi/abs/10.1126/science.ade2574?casa_token=Qvgo8ZWhDYwAAAAA:SbKFf-TJQHVPNS_peeNUOoKxnsYgvp-0PMaPG1Oh5zGLrs1zdoSJBTe_qDl4n9loA7-RFE5GDJ2_kIA) | [Github](https://github.com/facebookresearch/esm)            | Transformer | UniRef            |
+| AlphaFold 2   | Proteomics | [Highly Accurate Protein Structure Prediction with AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) | [Github](https://github.com/google-deepmind/alphafold)       | -           | PDB + Uniclust30  |
+
+
+
+## Datasets for Foundation Model
+
+### Text
+
+| Dataset (Paper)                                              | Description                                                  | Link                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Huatuo-26M ([arXiv](https://arxiv.org/abs/2305.01526))       | 26M Chinese medical QA pairs                                 | [Github](https://github.com/FreedomIntelligence/Huatuo-26M)  |
+| Medical Meadow ([arXiv](https://arxiv.org/abs/2304.08247))   | 16M medical QA pairs collected from 9 sources                | -                                                            |
+| MultiMedQA ([Nature](https://www.nature.com/articles/s41586-023-06291-2)) | 6 existing and 1 online-collected medical QA dataset         | [Nature](https://www.nature.com/articles/s41586-023-06291-2#data-availability) |
+| MedMCQA ([MLR](https://proceedings.mlr.press/v174/pal22a.html)) | 194K multiple-choice questions covering 2.4K healthcare topics | [Official cite](https://medmcqa.github.io/)                  |
+| MedQA-USMLE ([MDPI](https://www.mdpi.com/2076-3417/11/14/6421)) | 61,097 multiple choice questions based on USMLE in three languages | [Github](https://github.com/jind11/MedQA)                    |
+| CBLUE ([arXiv](https://arxiv.org/abs/2106.08087))            | A Chinese biomedical language understanding evaluation benchmark with 18 datasets | [Official cite](https://tianchi.aliyun.com/dataset/95414)    |
+| BLURB ([arXiv](https://arxiv.org/abs/2007.15779))            | 13 biomedical NLP datasets in 6 tasks                        | [Official cite](https://microsoft.github.io/BLURB/index.html) |
+| PubMedQA ([arXiv](https://arxiv.org/abs/1909.06146))         | 1K expert-annotated, 61.2K unlabeled, and 211.3K artificially generated biomedical QA instances | [Official cite](https://pubmedqa.github.io/)                 |
+| BLUE ([arXiv](https://arxiv.org/abs/1906.05474))             | 5 language tasks with 10 biomedical and clinical text datasets | [Github](https://github.com/ncbi-nlp/BLUE_Benchmark)         |
+| webMedQA ([BMC](https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-019-0761-8)) | 63,284 real-world Chinese medical questions with over 300K answers | [Github](https://github.com/hejunqing/webMedQA)              |
+| MedMentions ([arXiv](https://arxiv.org/abs/1902.09476))      | 4,392 papers annotated by experts with mentions of UMLS entities | [Github](https://github.com/chanzuckerberg/MedMentions)      |
+| MIMIC-III ([Nature](https://www.nature.com/articles/sdata201635)) | Critical care data for over 40,000 patients                  | [Official cite](https://mimic.mit.edu/docs/iii/)             |
+| ClinicalTrials.gov                                           | An online database of clinical research studies, including clinical trials and observational studies | [Official cite](https://clinicaltrials.gov)                  |
+
+### Imaging
+
+| Dataset (Paper)                                              | Description                                                  | Link                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| RETFound ([Nature](https://www.nature.com/articles/s41586-023-06555-x)) | Unannotated retinal images, containing 904,170 CFPs and 736,442 OCT scans | [Nature](https://www.nature.com/articles/s41586-023-06555-x#data-availability) |
+| AbdomenAtlas-8K ([arXiv](https://arxiv.org/abs/2305.09666))  | 8,448 CT volumes with per-voxel annotated eight abdominal organs | [Github](https://github.com/MrGiovanni/AbdomenAtlas)         |
+| Med-MNIST v2 ([Nature](https://www.nature.com/articles/s41597-022-01721-8)) | 12 2D and 6 3D datasets for biomedical image classification  | [Official cite](https://medmnist.com/)                       |
+| EchoNet-Dynamic ([Nature](https://idp.nature.com/authorize/casa?redirect_uri=https://www.nature.com/articles/s41586-020-2145-8&casa_token=uE_JgWrZ_UYAAAAA:9qEia-_2_fIZMgmhK0OamD4a6iq_wxaObBvA2Cp7r6criIIybpxDrwu5DLB37b2R5nZGkO1GDDa7PN6CUTQ)) | 10,030 expert-annotated echocardiogram videos                | [Official cite](https://echonet.github.io/dynamic/)          |
+| CheXpert ([arXiv](https://arxiv.org/abs/1901.07031))         | 224,316 chest radiographs of 65,240 patients                 | [Official cite](https://stanfordmlgroup.github.io/competitions/chexpert/) |
+| Kather Colon Dataset ([PMC](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6345440/)) | 100K histological images of human colorectal cancer and healthy tissue | [Zenodo](https://zenodo.org/records/1214456)                 |
+| DeepLesion ([PMC](https://pubmed.ncbi.nlm.nih.gov/30035154/)) | 32K CT scans with annotations and semantic labels from radiological reports | [NIH](https://www.nih.gov/news-events/news-releases/nih-clinical-center-releases-dataset-32000-ct-images) |
+| ChestXray-NIHCC ([arXiv](https://arxiv.org/abs/1705.02315))  | 100K radiographs with labels from more than 30,000 patients  | [NIH](https://nihcc.app.box.com/v/ChestXray-NIHCC)           |
+| ISIC                                                         | An archive containing 23K skin lesion images with labels & Imaging | [Official cite](https://www.isic-archive.com/)               |
+
+### Genomics
+
+| Dataset (Paper)                                              | Description                                                  | Link                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1000 Genomes Project ([Nature](https://www.nature.com/articles/nature15393)) | A comprehensive catalog of human genetic variations          | [Official cite](https://www.internationalgenome.org/)        |
+| ENCODE ([Nature](https://www.nature.com/articles/nature11247)) | A platform of genomics data and encyclopedia with integrative-level and ground-level annotations | [NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3439153/) |
+| dbSNP ([NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC29783/)) | A collection of human single nucleotide variations, microsatellites, and small-scale insertions and deletions | [NIH](https://pubmed.ncbi.nlm.nih.gov/11125122/)             |
+
+### Drug
+
+| Dataset (Paper)                                              | Description                                                  | Link                                           |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ---------------------------------------------- |
+| PubChem ([NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9825602/)) | A collection of 900+ sources of chemical information data    | [NIH](https://pubchem.ncbi.nlm.nih.gov/)       |
+| DrugBank ([NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753335/)) | A web-enabled structured database of molecular information about drugs | [Official cite](https://www.drugbank.com/)     |
+| ChEMBL ([NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245175/)) | 20M bioactivity measurements for 2.4M distinct compounds and 15K protein targets | [Official cite](https://www.ebi.ac.uk/chembl/) |
+
+### Mulit-Modal
+
+| Dataset (Paper)                                              | Description                                                  | Link                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| MedMD ([arXiv](https://arxiv.org/abs/2308.02463))            | 15.5M 2D scans and 180k 3D radiology scans  with textual descriptions | [Github](https://github.com/chaoyi-wu/RadFM)                 |
+| OpenPath ([Nature](https://www.nature.com/articles/s41591-023-02504-3)) | 208,414 pathology images paired with natural language descriptions | [Huggingface](https://huggingface.co/spaces/vinid/webplip)   |
+| Quilt-1M ([arXiv](https://arxiv.org/abs/2306.11207))         | 1M image-text pairs for histopathology                       | [Github](https://github.com/wisdomikezogwo/quilt1m)          |
+| Med-MMHL ([arXiv](https://arxiv.org/abs/2306.08871))         | Human- and LLM-generated misinformation detection dataset    |                                                              |
+| PathInstruct ([arXiv](https://arxiv.org/abs/2305.15072))     | 180K samples of LLM-generated instruction-following data     | [Github](https://github.com/superjamessyx/Generative-Foundation-AI-Assistant-for-Pathology) |
+| PMC-VQA ([arXiv](https://arxiv.org/abs/2305.10415))          | 227K VQA pairs of 149K images of various modalities or diseases | [Github](https://github.com/xiaoman-zhang/PMC-VQA)           |
+| PMC-OA ([arXiv](https://arxiv.org/abs/2303.07240))           | 1.6M fine-grained biomedical image-text pairs                | [Github](https://github.com/WeixiongLin/PMC-CLIP)            |
+| PathCap ([arXiv](https://arxiv.org/abs/2303.07240))          | 142K pathology image-caption pairs from various sources      | [Github](https://github.com/WeixiongLin/PMC-CLIP)            |
+| SwissProtCLAP ([arXiv](https://arxiv.org/abs/2302.04611))    | 441K text-protein sequence pairs                             | [Github](https://github.com/chao1224/chatdrug)               |
+| MIMIC-IV ([Nature](https://www.nature.com/articles/s41597-022-01899-x)) | Clinical information for hospital stays of over 60,000 patients | [Official cite]([MIMIC-IV documentation )                    |
+| MIMIC-CXR ([Nature](https://www.nature.com/articles/s41597-019-0322-0)) | 227,835 chest imaging studies with free-text reports for 65,379 patients | [PhysioNet](https://physionet.org/content/mimic-cxr/2.0.0/)  |
+| TCGA                                                         | A landmark cancer genomics program, molecularly characterized over 20,000 primary cancer and matched normal samples spanning 33 cancer types | [Official cite](https://www.cancer.gov/ccg/research/genome-sequencing/tcga) |
+
+
+
+## Data-Centric Strategies
