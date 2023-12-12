@@ -12,20 +12,20 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 
 **Contents**
 
-- [Healthcare and medical foundation models](#Healthcare and medical foundation models)
-    - [Language models](#Language Models)
-    - [Vision models](#Vision Models)
-    - [Vision-language models](#Vision-Language Models)
-    - [Protein models](#Protein Models)
+- [Healthcare and medical foundation models](#Healthcare-and-medical-foundation-models)
+    - [Language models](#Language-Models)
+    - [Vision models](#Vision-Models)
+    - [Vision-language models](#Vision-Language-Models)
+    - [Protein models](#Protein-Models)
 
-- [Datasets for foundation model](#Datasets for foundation model)
-    - Text
-    - Imaging
-    - Genomics
-    - Drug
-    - Multi-Modal
+- [Datasets for foundation model](#Datasets-for-foundation-model)
+    - [Text](#Text)
+    - [Imaging](#Imaging)
+    - [Genomics](#Genomics)
+    - [Drug](#Drug)
+    - [Multi-Modal](#Multi-Modal)
 
-- [Data-centric strategies](#Data-centric strategies)
+- [Data-centric strategies](#Data-centric-strategies)
 
 
 
