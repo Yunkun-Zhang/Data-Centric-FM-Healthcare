@@ -4,7 +4,7 @@ A survey on data-centric foundation models in computational healthcare.
 
 **[Project [This Page]]()** | **[Paper [arXiv]](https://arxiv.org/abs/2401.02458)**
 
-Last updated: 2024/01/08
+Last updated: 2024/01/10
 
 ---
 
