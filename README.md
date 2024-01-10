@@ -67,6 +67,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 
 | Model        | Subfield    | Paper                                                        | Code                                                         | Base       | Pre-Training Data                   |
 | :----------- | :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :--------- | :---------------------------------- |
+| SAT          | Radiology   | [One Model to Rule them All: Towards Universal Segmentation for Medical Images with Text Prompts](https://arxiv.org/abs/2312.17183) | [Github](https://github.com/zhaoziheng/SAT)                  | -          | SAT-DS                              |
 | PathChat     | Pathology   | [A Foundational Multimodal Vision Language AI Assistant for Human Pathology](https://arxiv.org/abs/2312.07814) | -                                                            | LLaVA      | PathChatInstruct                    |
 | Qilin-Med-VL | Radiology   | [Qilin-Med-VL: Towards Chinese Large Vision-Language Model for General Healthcare](https://arxiv.org/abs/2310.17956) | [Github](https://github.com/williamliujl/Qilin-Med-VL)       | LLaVA      | Chi-Med-VL                          |
 | CXR-CLIP     | Radiology   | [CXR-CLIP: Toward Large Scale Chest X-ray Language-Image Pre-training](https://arxiv.org/abs/2310.13292) | [Github](https://github.com/kakaobrain/cxr-clip)             | CLIP       | MIMIC-CXR + CheXpert + ChestX-ray14 |
@@ -156,6 +157,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 
 | Dataset (Paper)                                              | Description                                                  | Link                                                         |
 | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| SAT-DS ([arXiv](https://arxiv.org/abs/2312.17183))           | 11,462 scans with 142,254 segmentation annotations spanning 8 human body regions from 31 medical image segmentation datasets, together with domain knowledge from e-Anatomy and UMLS | [Github](https://github.com/zhaoziheng/SAT)                  |
 | PathChatInstruct ([arXiv](https://arxiv.org/abs/2312.07814)) | 257,004 instructions of pathology-specific queries with image and text | -                                                            |
 | Chi-Med-VL ([arXiv](https://arxiv.org/abs/2310.17956))       | 580,014 image-text pairs and 469,441 question-answer pairs for general healthcare in Chinese | [Github](https://github.com/williamliujl/Qilin-Med-VL)       |
 | MedMD ([arXiv](https://arxiv.org/abs/2308.02463))            | 15.5M 2D scans and 180k 3D radiology scans  with textual descriptions | [Github](https://github.com/chaoyi-wu/RadFM)                 |
