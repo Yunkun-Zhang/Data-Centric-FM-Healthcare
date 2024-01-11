@@ -180,7 +180,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 | PMC-OA ([arXiv](https://arxiv.org/abs/2303.07240))           | 1.6M fine-grained biomedical image-text pairs                | [Github](https://github.com/WeixiongLin/PMC-CLIP)            |
 | PathCap ([arXiv](https://arxiv.org/abs/2303.07240))          | 142K pathology image-caption pairs from various sources      | [Github](https://github.com/WeixiongLin/PMC-CLIP)            |
 | SwissProtCLAP ([arXiv](https://arxiv.org/abs/2302.04611))    | 441K text-protein sequence pairs                             | [Github](https://github.com/chao1224/chatdrug)               |
-| MIMIC-IV ([Nature](https://www.nature.com/articles/s41597-022-01899-x)) | Clinical information for hospital stays of over 60,000 patients | [Official site]([MIMIC-IV documentation )                    |
+| MIMIC-IV ([Nature](https://www.nature.com/articles/s41597-022-01899-x)) | Clinical information for hospital stays of over 60,000 patients | [Official site](https://mimic.mit.edu/docs/iv/)              |
 | MIMIC-CXR ([Nature](https://www.nature.com/articles/s41597-019-0322-0)) | 227,835 chest imaging studies with free-text reports for 65,379 patients | [PhysioNet](https://physionet.org/content/mimic-cxr/2.0.0/)  |
 | TCGA                                                         | A landmark cancer genomics program, molecularly characterized over 20,000 primary cancer and matched normal samples spanning 33 cancer types | [Official site](https://www.cancer.gov/ccg/research/genome-sequencing/tcga) |
 
