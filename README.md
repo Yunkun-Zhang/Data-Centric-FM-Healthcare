@@ -1,16 +1,27 @@
 # Data-Centric Foundation Models in Computational Healthcare
 
-A survey on data-centric foundation models in computational healthcare.
+:fire::fire::fire: **A survey on data-centric foundation models in computational healthcare**
 
 **[Project [This Page]]()** | **[Paper [arXiv]](https://arxiv.org/abs/2401.02458)**
 
-Last updated: 2024/01/10
+Last updated: 2024/01/11
+
+:pencil: **If you find this repo helps, please kindly cite our survey, thanks!**
+
+```
+@article{zhang2024data,
+  title={Data-Centric Foundation Models in Computational Healthcare: A Survey},
+  author={Zhang, Yunkun and Gao, Jin and Tan, Zheling and Zhou, Lingfeng and Ding, Kexin and Zhou, Mu and Zhang, Shaoting and Wang, Dequan},
+  journal={arXiv preprint arXiv:2401.02458},
+  year={2024}
+}
+```
 
 ---
 
 In this repository, we provide an up-to-date list of healthcare-related foundation models and datasets, which are also mentioned in our survey paper.
 
-**Contents**
+:book: **Contents**
 
 - [Healthcare and medical foundation models](#Healthcare-and-medical-foundation-models)
     - [Language models](#Language-Models)
