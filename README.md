@@ -4,7 +4,7 @@
 
 **[Project [This Page]]()** | **[Paper [arXiv]](https://arxiv.org/abs/2401.02458)**
 
-Last updated: 2024/01/15
+Last updated: 2024/01/17
 
 :pencil: **If you find this repo helps, please kindly cite our survey, thanks!**
 
@@ -28,6 +28,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
     - [Vision models](#Vision-Models)
     - [Vision-language models](#Vision-Language-Models)
     - [Protein and molecule models](#Protein-and-Molecule-Models)
+    - [EEG models](#EEG-Models)
 - [Datasets for foundation model](#Datasets-for-foundation-model)
     - [Text](#Text)
     - [Imaging](#Imaging)
@@ -67,11 +68,11 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 
 | Model      | Subfield    | Paper                                                        | Code                                                         | Base   | Pre-Training Data   |
 | :--------- | :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----- | :------------------ |
-| RudolfV    | Pathology   | [RudolfV: A Foundation Model by Pathologists for Pathologists](https://arxiv.org/abs/2401.04079) | -                                                            | DINOv2 | RudolfV             |
+| RudolfV    | Pathology   | [RudolfV: A Foundation Model by Pathologists for Pathologists](https://arxiv.org/abs/2401.04079) | -                                                            | DINOv2 | RudolfV*            |
 | UNI        | Pathology   | [A General-Purpose Self-Supervised Model for Computational Pathology](https://arxiv.org/abs/2308.15474) | -                                                            | DINOv2 | Mass-100K           |
 | REMEDIS    | Radiology   | [Robust and Data-Efficient Generalization of Self-Supervised Machine Learning for Diagnostic Imaging](https://idp.nature.com/authorize/casa?redirect_uri=https://www.nature.com/articles/s41551-023-01049-7&casa_token=jsWqfcJssI0AAAAA:zt3n5PYal2WyePCxeKXW4q4x0gmqtWQYHCLqXbLQhK1ERML3pgp68Q7GBN1wVK9MYP5iyxBzlsaD1Tygag) | [Github](https://github.com/google-research/medical-ai-research-foundations) | SimCLR | MIMIC-IV + CheXpert |
-| Virchow    | Pathology   | [Virchow: A Million-Slide Digital Pathology Foundation Model](https://arxiv.org/abs/2309.07778) | -                                                            | DINOv2 | Virchow             |
-| RETFound   | Retinopathy | [A Foundation Model for Generalizable Disease Detection from Retinal Images](https://www.nature.com/articles/s41586-023-06555-x) | [Github](https://github.com/rmaphoh/RETFound_MAE)            | MAE    | RETFound            |
+| Virchow    | Pathology   | [Virchow: A Million-Slide Digital Pathology Foundation Model](https://arxiv.org/abs/2309.07778) | -                                                            | DINOv2 | Virchow*            |
+| RETFound   | Retinopathy | [A Foundation Model for Generalizable Disease Detection from Retinal Images](https://www.nature.com/articles/s41586-023-06555-x) | [Github](https://github.com/rmaphoh/RETFound_MAE)            | MAE    | RETFound*           |
 | CTransPath | Pathology   | [Transformer-Based Unsupervised Contrastive Learning for Histopathological Image Classification](https://www.sciencedirect.com/science/article/pii/S1361841522002043?casa_token=YBbUxnv_qsAAAAAA:YrgecQ6ecLad4Bj3JfGl0SZvjRgSQBZ27KYtpH6jU3vy6j-8hGrnQzbVFWCg0vH9Pn7r5H1Cxw) | [Github](https://github.com/Xiyue-Wang/TransPath)            | -      | TCGA + PAIP         |
 | HIPT       | Pathology   | [Scaling Vision Transformers to Gigapixel Images via Hierarchical Self-Supervised Learning](https://openaccess.thecvf.com/content/CVPR2022/html/Chen_Scaling_Vision_Transformers_to_Gigapixel_Images_via_Hierarchical_Self-Supervised_Learning_CVPR_2022_paper.html?trk=public_post_comment-text) | [Github](https://github.com/mahmoodlab/HIPT)                 | DINO   | TCGA                |
 
@@ -108,9 +109,15 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 | :------------ | :--------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :---------- | :---------------- |
 | MoleculeSTM   | Drug       | [Multi-modal Molecule Structure-text Model for Text-based Retrieval and Editing](https://www.nature.com/articles/s42256-023-00759-6) | [Github](https://github.com/chao1224/MoleculeSTM)            | CLIP        | PubChem           |
 | AlphaMissense | Proteomics | [Accurate Proteome-Wide Missense Variant Effect Prediction with AlphaMissense](https://www.science.org/doi/abs/10.1126/science.adg7492) | [Github](https://github.com/deepmind/alphamissense)          | AlphaFold   | PDB + UniRef      |
-| GET           | Genomics   | [GET: A Foundation Model of Transcription across Human Cell Types](https://www.biorxiv.org/content/10.1101/2023.09.24.559168.abstract) | [Huggingface](https://huggingface.co/spaces/get-foundation/getdemo) | Transformer | GET               |
+| GET           | Genomics   | [GET: A Foundation Model of Transcription across Human Cell Types](https://www.biorxiv.org/content/10.1101/2023.09.24.559168.abstract) | [Huggingface](https://huggingface.co/spaces/get-foundation/getdemo) | Transformer | GET*              |
 | ESM-2         | Proteomics | [Evolutionary-Scale Prediction of Atomic-Level Protein Structure with a Language Model](https://www.science.org/doi/abs/10.1126/science.ade2574?casa_token=Qvgo8ZWhDYwAAAAA:SbKFf-TJQHVPNS_peeNUOoKxnsYgvp-0PMaPG1Oh5zGLrs1zdoSJBTe_qDl4n9loA7-RFE5GDJ2_kIA) | [Github](https://github.com/facebookresearch/esm)            | Transformer | UniRef            |
 | AlphaFold 2   | Proteomics | [Highly Accurate Protein Structure Prediction with AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) | [Github](https://github.com/google-deepmind/alphafold)       | -           | PDB + Uniclust30  |
+
+### EEG Models
+
+| Model  | Subfield | Paper                                                        | Code | Base        | Pre-Training Data |
+| :----- | :------- | :----------------------------------------------------------- | :--- | :---------- | :---------------- |
+| LaBraM | Brain    | [Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI](https://openreview.net/forum?id=QzTpTRVtrP) | -    | Transformer | LaBraM*           |
 
 
 
