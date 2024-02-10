@@ -4,7 +4,7 @@
 
 **[Project [This Page]]()** | **[Paper [arXiv]](https://arxiv.org/abs/2401.02458)**
 
-Last updated: 2024/01/17
+Last updated: 2024/02/10
 
 :pencil: **If you find this repo helps, please kindly cite our survey, thanks!**
 
@@ -28,7 +28,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
     - [Vision models](#Vision-Models)
     - [Vision-language models](#Vision-Language-Models)
     - [Protein and molecule models](#Protein-and-Molecule-Models)
-    - [EEG models](#EEG-Models)
+    - [Other models](#Other-Models)
 - [Datasets for foundation model](#Datasets-for-foundation-model)
     - [Text](#Text)
     - [Imaging](#Imaging)
@@ -80,24 +80,26 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 
 | Model        | Subfield    | Paper                                                        | Code                                                         | Base             | Pre-Training Data                   |
 | :----------- | :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :--------------- | :---------------------------------- |
-| SAT          | Radiology   | [One Model to Rule them All: Towards Universal Segmentation for Medical Images with Text Prompts](https://arxiv.org/abs/2312.17183) | [Github](https://github.com/zhaoziheng/SAT)                  | -                | SAT-DS                              |
-| PathChat     | Pathology   | [A Foundational Multimodal Vision Language AI Assistant for Human Pathology](https://arxiv.org/abs/2312.07814) | -                                                            | LLaVA            | PathChatInstruct                    |
-| Qilin-Med-VL | Radiology   | [Qilin-Med-VL: Towards Chinese Large Vision-Language Model for General Healthcare](https://arxiv.org/abs/2310.17956) | [Github](https://github.com/williamliujl/Qilin-Med-VL)       | LLaVA            | Chi-Med-VL                          |
+| ChemDFM      | Chemistry   | [ChemDFM: Dialogue Foundation Model for Chemistry](https://arxiv.org/abs/2401.14818) | -                                                            | LLaMA            | PubMed + USPTO                      |
+| CheXagent    | Radiology   | [CheXagent: Towards a Foundation Model for Chest X-Ray Interpretation](https://arxiv.org/abs/2401.12208) | [Github](https://github.com/Stanford-AIMI/CheXagent)         | BLIP-2           | CheXinstruct*                       |
+| SAT          | Radiology   | [One Model to Rule them All: Towards Universal Segmentation for Medical Images with Text Prompts](https://arxiv.org/abs/2312.17183) | [Github](https://github.com/zhaoziheng/SAT)                  | -                | SAT-DS*                             |
+| PathChat     | Pathology   | [A Foundational Multimodal Vision Language AI Assistant for Human Pathology](https://arxiv.org/abs/2312.07814) | -                                                            | LLaVA            | PathChatInstruct*                   |
+| Qilin-Med-VL | Radiology   | [Qilin-Med-VL: Towards Chinese Large Vision-Language Model for General Healthcare](https://arxiv.org/abs/2310.17956) | [Github](https://github.com/williamliujl/Qilin-Med-VL)       | LLaVA            | Chi-Med-VL*                         |
 | CXR-CLIP     | Radiology   | [CXR-CLIP: Toward Large Scale Chest X-ray Language-Image Pre-training](https://arxiv.org/abs/2310.13292) | [Github](https://github.com/kakaobrain/cxr-clip)             | CLIP             | MIMIC-CXR + CheXpert + ChestX-ray14 |
 | MaCo         | Radiology   | [Enhancing Representation in Radiography-Reports Foundation Model: A Granular Alignment Algorithm Using Masked Contrastive Learning](https://arxiv.org/abs/2309.05904) | -                                                            | MAE + CLIP       | MIMIC-CXR                           |
 | PathLDM      | Pathology   | [PathLDM: Text conditioned Latent Diffusion Model for Histopathology](https://openaccess.thecvf.com/content/WACV2024/html/Yellapragada_PathLDM_Text_Conditioned_Latent_Diffusion_Model_for_Histopathology_WACV_2024_paper.html) | [Github](https://github.com/cvlab-stonybrook/PathLDM)        | Latent Diffusion | TCGA-BRCA + GPT-3.5                 |
-| RadFM        | Radiology   | [Towards Generalist Foundation Model for Radiology](https://arxiv.org/abs/2308.02463) | [Github](https://github.com/chaoyi-wu/RadFM)                 | -                | MedMD                               |
+| RadFM        | Radiology   | [Towards Generalist Foundation Model for Radiology](https://arxiv.org/abs/2308.02463) | [Github](https://github.com/chaoyi-wu/RadFM)                 | -                | MedMD*                              |
 | KAD          | Radiology   | [Knowledge-Enhanced Visual-Language Pre-Training on Chest Radiology Images](https://www.nature.com/articles/s41467-023-40260-7) | [Github](https://github.com/xiaoman-zhang/KAD)               | CLIP             | MIMIC-CXR + UMLS                    |
 | Med-Flamingo | Medicine    | [Med-Flamingo: A Multimodal Medical Few-Shot Learner](https://proceedings.mlr.press/v225/moor23a.html) | [Github](https://github.com/snap-stanford/med-flamingo)      | Flamingo         | MTB + PMC-OA                        |
 | CONCH        | Pathology   | [Towards a Visual-Language Foundation Model for Computational Pathology](https://arxiv.org/abs/2307.12914) | -                                                            | CoCa             | PubMed + PMC                        |
-| QuiltNet     | Pathology   | [Quilt-1M: One Million Image-Text Pairs for Histopathology](https://arxiv.org/abs/2306.11207) | [Github](https://github.com/wisdomikezogwo/quilt1m)          | CLIP             | Quilt-1M                            |
-| PathAsst     | Pathology   | [PathAsst: Redefining Pathology through Generative Foundation AI Assistant for Pathology](https://arxiv.org/abs/2305.15072) | [Github](https://github.com/superjamessyx/Generative-Foundation-AI-Assistant-for-Pathology) | CLIP             | PathCap + PathInstruct              |
-| PLIP         | Pathology   | [A Visual-Language Foundation Model for Pathology Image Analysis Using Medical Twitter](https://idp.nature.com/authorize/casa?redirect_uri=https://www.nature.com/articles/s41591-023-02504-3&casa_token=cnEpAWMo9RIAAAAA:_v3_yKPcr_afGn_MCirdOLLHyC63vSFVuvqu2sM4lnxJaZVQF7gmZsEjP2-W-CTQ9Xr2OVOpQEjgdIf9Jw) | [Huggingface](https://huggingface.co/spaces/vinid/webplip)   | CLIP             | OpenPath                            |
+| QuiltNet     | Pathology   | [Quilt-1M: One Million Image-Text Pairs for Histopathology](https://arxiv.org/abs/2306.11207) | [Github](https://github.com/wisdomikezogwo/quilt1m)          | CLIP             | Quilt-1M*                           |
+| PathAsst     | Pathology   | [PathAsst: Redefining Pathology through Generative Foundation AI Assistant for Pathology](https://arxiv.org/abs/2305.15072) | [Github](https://github.com/superjamessyx/Generative-Foundation-AI-Assistant-for-Pathology) | CLIP             | PathCap + PathInstruct*             |
+| PLIP         | Pathology   | [A Visual-Language Foundation Model for Pathology Image Analysis Using Medical Twitter](https://idp.nature.com/authorize/casa?redirect_uri=https://www.nature.com/articles/s41591-023-02504-3&casa_token=cnEpAWMo9RIAAAAA:_v3_yKPcr_afGn_MCirdOLLHyC63vSFVuvqu2sM4lnxJaZVQF7gmZsEjP2-W-CTQ9Xr2OVOpQEjgdIf9Jw) | [Huggingface](https://huggingface.co/spaces/vinid/webplip)   | CLIP             | OpenPath*                           |
 | MI-Zero      | Pathology   | [Visual Language Pretrained Multiple Instance Zero-Shot Transfer for Histopathology Images](http://openaccess.thecvf.com/content/CVPR2023/html/Lu_Visual_Language_Pretrained_Multiple_Instance_Zero-Shot_Transfer_for_Histopathology_Images_CVPR_2023_paper.html) | [Github](https://github.com/mahmoodlab/MI-Zero)              | CLIP             | ARCH                                |
 | LLaVA-Med    | Biomedicine | [LLaVA-Med: Training a Large Language-and-Vision Assistant for Biomedicine in One Day](https://arxiv.org/abs/2306.00890) | [Github](https://github.com/microsoft/LLaVA-Med)             | LLaVA            | PMC-15M + GPT-4                     |
-| MedVInT      | Biomedicine | [PMC-VQA: Visual Instruction Tuning for Medical Visual Question Answering](https://arxiv.org/abs/2305.10415) | [Github](https://github.com/xiaoman-zhang/PMC-VQA)           | -                | PMC-VQA                             |
-| PMC-CLIP     | Biomedicine | [PMC-CLIP: Contrastive Language-Image Pre-Training Using Biomedical Documents](https://arxiv.org/abs/2303.07240) | [Github](https://github.com/WeixiongLin/PMC-CLIP)            | CLIP             | PMC-OA                              |
-| BiomedCLIP   | Biomedicine | [Large-Scale Domain-Specific Pretraining for Biomedical Vision-Language Processing](https://arxiv.org/abs/2303.00915) | [Huggingface](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224) | CLIP             | PMC-15M                             |
+| MedVInT      | Biomedicine | [PMC-VQA: Visual Instruction Tuning for Medical Visual Question Answering](https://arxiv.org/abs/2305.10415) | [Github](https://github.com/xiaoman-zhang/PMC-VQA)           | -                | PMC-VQA*                            |
+| PMC-CLIP     | Biomedicine | [PMC-CLIP: Contrastive Language-Image Pre-Training Using Biomedical Documents](https://arxiv.org/abs/2303.07240) | [Github](https://github.com/WeixiongLin/PMC-CLIP)            | CLIP             | PMC-OA*                             |
+| BiomedCLIP   | Biomedicine | [Large-Scale Domain-Specific Pretraining for Biomedical Vision-Language Processing](https://arxiv.org/abs/2303.00915) | [Huggingface](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224) | CLIP             | PMC-15M*                            |
 | MedKLIP      | Radiology   | [MedKLIP: Medical Knowledge Eenhanced Language-Image Pre-Training](https://www.medrxiv.org/content/10.1101/2023.01.10.23284412.abstract) | [Github](https://github.com/MediaBrain-SJTU/MedKLIP)         | CLIP             | MIMIC-CXR                           |
 | MedCLIP      | Medicine    | [MedCLIP: Contrastive Learning from Unpaired Medical Images and Text](https://arxiv.org/abs/2210.10163) | [Github](https://github.com/RyanWangZf/MedCLIP)              | CLIP             | CheXpert + MIMIC-CXR                |
 | CheXzero     | Radiology   | [Expert-Level Detection of Pathologies from Unannotated Chest X-ray Images via Self-Supervised Learning](https://www.nature.com/articles/s41551-022-00936-9) | [Github](https://github.com/rajpurkarlab/CheXzero)           | CLIP             | MIMIC-CXR                           |
@@ -110,14 +112,16 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 | MoleculeSTM   | Drug       | [Multi-modal Molecule Structure-text Model for Text-based Retrieval and Editing](https://www.nature.com/articles/s42256-023-00759-6) | [Github](https://github.com/chao1224/MoleculeSTM)            | CLIP        | PubChem           |
 | AlphaMissense | Proteomics | [Accurate Proteome-Wide Missense Variant Effect Prediction with AlphaMissense](https://www.science.org/doi/abs/10.1126/science.adg7492) | [Github](https://github.com/deepmind/alphamissense)          | AlphaFold   | PDB + UniRef      |
 | GET           | Genomics   | [GET: A Foundation Model of Transcription across Human Cell Types](https://www.biorxiv.org/content/10.1101/2023.09.24.559168.abstract) | [Huggingface](https://huggingface.co/spaces/get-foundation/getdemo) | Transformer | GET*              |
+| GIT-Mol       | Molecules  | [GIT-Mol: A Multi-Modal Large Language Model for Molecular Science with Graph, Image, and Text](https://www.sciencedirect.com/science/article/pii/S0010482524001574?casa_token=Dkncjjih45UAAAAA:wJyM-lr4S-KMG2iqc3YkRpuHaMhJzFidXKt0PCwgJLjTQuFLN-DVA4t6CE9pTtuadXKTAe7jdeI) | [Github](https://github.com/AI-HPC-Research-Team/GIT-Mol)    | T5 + BLIP-2 | PubChem           |
 | ESM-2         | Proteomics | [Evolutionary-Scale Prediction of Atomic-Level Protein Structure with a Language Model](https://www.science.org/doi/abs/10.1126/science.ade2574?casa_token=Qvgo8ZWhDYwAAAAA:SbKFf-TJQHVPNS_peeNUOoKxnsYgvp-0PMaPG1Oh5zGLrs1zdoSJBTe_qDl4n9loA7-RFE5GDJ2_kIA) | [Github](https://github.com/facebookresearch/esm)            | Transformer | UniRef            |
 | AlphaFold 2   | Proteomics | [Highly Accurate Protein Structure Prediction with AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) | [Github](https://github.com/google-deepmind/alphafold)       | -           | PDB + Uniclust30  |
 
-### EEG Models
+### Other Models
 
-| Model  | Subfield | Paper                                                        | Code | Base        | Pre-Training Data |
-| :----- | :------- | :----------------------------------------------------------- | :--- | :---------- | :---------------- |
-| LaBraM | Brain    | [Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI](https://openreview.net/forum?id=QzTpTRVtrP) | -    | Transformer | LaBraM*           |
+| Model  | Subfield            | Paper                                                        | Code | Base        | Pre-Training Data |
+| :----- | :------------------ | :----------------------------------------------------------- | :--- | :---------- | :---------------- |
+| OmniNA | Nucleotide sequence | [OmniNA: A Foundation Model for Nucleotide Sequences](https://www.biorxiv.org/content/10.1101/2024.01.14.575543.abstract) | -    | LLaMA       | NCBI              |
+| LaBraM | EEG                 | [Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI](https://openreview.net/forum?id=QzTpTRVtrP) | -    | Transformer | LaBraM*           |
 
 
 
