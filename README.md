@@ -2,9 +2,9 @@
 
 :fire::fire::fire: **A survey on data-centric foundation models in computational healthcare**
 
-**[Project [This Page]]()** | **[Paper [arXiv]](https://arxiv.org/abs/2401.02458)**
+**[Project Page](https://data-centric-fm-healthcare.github.io/)** | **[Paper [arXiv]](https://arxiv.org/abs/2401.02458)**
 
-Last updated: 2024/02/10
+Last updated: 2024/02/19
 
 :pencil: **If you find this repo helps, please kindly cite our survey, thanks!**
 
@@ -40,20 +40,21 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 
 ## Healthcare and Medical Foundation Models
 
+A star (*) after the pre-training data shows that the authors constructed the data with a number of sources.
+
 ### Language Models
 
 | Model               | Subfield    | Paper                                                        | Code                                                         | Base    | Pre-Training Data    |
 | :------------------ | :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :------ | :------------------- |
-| Meditron            | Medicine    | [Meditron-70B: Scaling Medical Pretraining for Large Language Models](https://arxiv.org/abs/2311.16079) | [Github](https://github.com/epfLLM/meditron)                 | LLaMA 2 | GAP-Replay           |
+| Meditron            | Medicine    | [Meditron-70B: Scaling Medical Pretraining for Large Language Models](https://arxiv.org/abs/2311.16079) | [Github](https://github.com/epfLLM/meditron)                 | LLaMA 2 | GAP-Replay*          |
 | Taiyi               | Biomedicine | [Taiyi: A Bilingual Fine-Tuned Large Language Model for Diverse Biomedical Tasks](https://arxiv.org/abs/2311.11608) | [Github](https://github.com/DUTIR-BioNLP/Taiyi-LLM)          | Qwen    | BigBio + CBLUE       |
-| RadFM               | Radiology   | [Towards Generalist Foundation Model for Radiology](https://arxiv.org/abs/2308.02463) | [Github](https://chaoyi-wu.github.io/RadFM)                  | LLaMA   | MedMD                |
 | BioMedGPT           | Biomedicine | [BioMedGPT: Open Multimodal Generative Pre-trained Transformer for BioMedicine](https://arxiv.org/abs/2308.09442) | [Github](https://github.com/PharMolix/OpenBioMed)            | LLaMA 2 | S2ORC                |
 | Clinical LLaMA-LoRA | Clinic      | [Parameter-Efficient Fine-Tuning of LLaMA for the Clinical Domain](https://arxiv.org/abs/2307.03042) | -                                                            | LLaMA   | MIMIC-IV             |
 | Med-PaLM 2          | Clinic      | [Towards Expert-Level Medical Question Answering with Large Language Models](https://arxiv.org/abs/2305.09617) | [Google](https://sites.research.google/med-palm/)            | PaLM 2  | MultiMedQA           |
 | PMC-LLaMA           | Medicine    | [PMC-LLaMA: Towards Building Open-source Language Models for Medicine](https://arxiv.org/abs/2304.14454) | [Github](https://github.com/chaoyi-wu/PMC-LLaMA)             | LLaMA   | MedC                 |
 | MedAlpaca           | Medicine    | [MedAlpaca -- An Open-Source Collection of Medical Conversational AI Models and Training Data](https://arxiv.org/abs/2304.08247) | [Github](https://github.com/kbressem/medAlpaca)              | LLaMA   | Medical Meadow       |
 | BenTsao (HuaTuo)    | Biomedicine | [HuaTuo: Tuning LLaMA Model with Chinese Medical Knowledge](https://arxiv.org/abs/2304.06975) | [Github](https://github.com/SCIR-HI/Huatuo-Llama-Med-Chinese) | LLaMA   | CMeKG                |
-| ChatDoctor          | Medicine    | [ChatDoctor: A Medical Chat Model Fine-Tuned on a Large Language Model Meta-AI (LLaMA) Using Medical Domain Knowledge](https://arxiv.org/abs/2303.14070) | [Github](https://github.com/Kent0n-Li/ChatDoctor)            | LLaMA   | HealthCareMagic-100k |
+| ChatDoctor          | Medicine    | [ChatDoctor: A Medical Chat Model Fine-Tuned on a Large Language Model Meta-AI (LLaMA) Using Medical Domain Knowledge](https://arxiv.org/abs/2303.14070) | [Github](https://github.com/Kent0n-Li/ChatDoctor)            | LLaMA   | HealthCareMagic*     |
 | Clinical-T5         | Clinic      | [Clinical-T5: Large Language Models Built Using Mimic Clinical Text](https://www.physionet.org/content/clinical-t5/1.0.0/) | [PhysioNet](https://www.physionet.org/content/clinical-t5/1.0.0/) | T5      | MIMIC-III + MIMIC-IV |
 | Med-PaLM            | Clinic      | [Large Language Models Encode Clinical Knowledge](https://arxiv.org/abs/2212.13138) | [Google](https://sites.research.google/med-palm)             | PaLM    | MultiMedQA           |
 | BioGPT              | Biomedicine | [BioGPT: Generative Pre-Trained Transformer for Biomedical Text Generation and Mining](https://academic.oup.com/bib/article-abstract/23/6/bbac409/6713511) | [Github](https://github.com/microsoft/BioGPT)                | GPT-2   | PubMed               |
@@ -68,11 +69,12 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 
 | Model      | Subfield    | Paper                                                        | Code                                                         | Base   | Pre-Training Data   |
 | :--------- | :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----- | :------------------ |
-| RudolfV    | Pathology   | [RudolfV: A Foundation Model by Pathologists for Pathologists](https://arxiv.org/abs/2401.04079) | -                                                            | DINOv2 | RudolfV*            |
+| VISION-MAE | Radiology   | [VISION-MAE: A Foundation Model for Medical Image Segmentation and Classification](https://arxiv.org/abs/2402.01034) | -                                                            | MAE    | *                   |
+| RudolfV    | Pathology   | [RudolfV: A Foundation Model by Pathologists for Pathologists](https://arxiv.org/abs/2401.04079) | -                                                            | DINOv2 | *                   |
 | UNI        | Pathology   | [A General-Purpose Self-Supervised Model for Computational Pathology](https://arxiv.org/abs/2308.15474) | -                                                            | DINOv2 | Mass-100K           |
 | REMEDIS    | Radiology   | [Robust and Data-Efficient Generalization of Self-Supervised Machine Learning for Diagnostic Imaging](https://idp.nature.com/authorize/casa?redirect_uri=https://www.nature.com/articles/s41551-023-01049-7&casa_token=jsWqfcJssI0AAAAA:zt3n5PYal2WyePCxeKXW4q4x0gmqtWQYHCLqXbLQhK1ERML3pgp68Q7GBN1wVK9MYP5iyxBzlsaD1Tygag) | [Github](https://github.com/google-research/medical-ai-research-foundations) | SimCLR | MIMIC-IV + CheXpert |
-| Virchow    | Pathology   | [Virchow: A Million-Slide Digital Pathology Foundation Model](https://arxiv.org/abs/2309.07778) | -                                                            | DINOv2 | Virchow*            |
-| RETFound   | Retinopathy | [A Foundation Model for Generalizable Disease Detection from Retinal Images](https://www.nature.com/articles/s41586-023-06555-x) | [Github](https://github.com/rmaphoh/RETFound_MAE)            | MAE    | RETFound*           |
+| Virchow    | Pathology   | [Virchow: A Million-Slide Digital Pathology Foundation Model](https://arxiv.org/abs/2309.07778) | -                                                            | DINOv2 | *                   |
+| RETFound   | Retinopathy | [A Foundation Model for Generalizable Disease Detection from Retinal Images](https://www.nature.com/articles/s41586-023-06555-x) | [Github](https://github.com/rmaphoh/RETFound_MAE)            | MAE    | *                   |
 | CTransPath | Pathology   | [Transformer-Based Unsupervised Contrastive Learning for Histopathological Image Classification](https://www.sciencedirect.com/science/article/pii/S1361841522002043?casa_token=YBbUxnv_qsAAAAAA:YrgecQ6ecLad4Bj3JfGl0SZvjRgSQBZ27KYtpH6jU3vy6j-8hGrnQzbVFWCg0vH9Pn7r5H1Cxw) | [Github](https://github.com/Xiyue-Wang/TransPath)            | -      | TCGA + PAIP         |
 | HIPT       | Pathology   | [Scaling Vision Transformers to Gigapixel Images via Hierarchical Self-Supervised Learning](https://openaccess.thecvf.com/content/CVPR2022/html/Chen_Scaling_Vision_Transformers_to_Gigapixel_Images_via_Hierarchical_Self-Supervised_Learning_CVPR_2022_paper.html?trk=public_post_comment-text) | [Github](https://github.com/mahmoodlab/HIPT)                 | DINO   | TCGA                |
 
@@ -111,7 +113,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 | :------------ | :--------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :---------- | :---------------- |
 | MoleculeSTM   | Drug       | [Multi-modal Molecule Structure-text Model for Text-based Retrieval and Editing](https://www.nature.com/articles/s42256-023-00759-6) | [Github](https://github.com/chao1224/MoleculeSTM)            | CLIP        | PubChem           |
 | AlphaMissense | Proteomics | [Accurate Proteome-Wide Missense Variant Effect Prediction with AlphaMissense](https://www.science.org/doi/abs/10.1126/science.adg7492) | [Github](https://github.com/deepmind/alphamissense)          | AlphaFold   | PDB + UniRef      |
-| GET           | Genomics   | [GET: A Foundation Model of Transcription across Human Cell Types](https://www.biorxiv.org/content/10.1101/2023.09.24.559168.abstract) | [Huggingface](https://huggingface.co/spaces/get-foundation/getdemo) | Transformer | GET*              |
+| GET           | Genomics   | [GET: A Foundation Model of Transcription across Human Cell Types](https://www.biorxiv.org/content/10.1101/2023.09.24.559168.abstract) | [Huggingface](https://huggingface.co/spaces/get-foundation/getdemo) | Transformer | *                 |
 | GIT-Mol       | Molecules  | [GIT-Mol: A Multi-Modal Large Language Model for Molecular Science with Graph, Image, and Text](https://www.sciencedirect.com/science/article/pii/S0010482524001574?casa_token=Dkncjjih45UAAAAA:wJyM-lr4S-KMG2iqc3YkRpuHaMhJzFidXKt0PCwgJLjTQuFLN-DVA4t6CE9pTtuadXKTAe7jdeI) | [Github](https://github.com/AI-HPC-Research-Team/GIT-Mol)    | T5 + BLIP-2 | PubChem           |
 | ESM-2         | Proteomics | [Evolutionary-Scale Prediction of Atomic-Level Protein Structure with a Language Model](https://www.science.org/doi/abs/10.1126/science.ade2574?casa_token=Qvgo8ZWhDYwAAAAA:SbKFf-TJQHVPNS_peeNUOoKxnsYgvp-0PMaPG1Oh5zGLrs1zdoSJBTe_qDl4n9loA7-RFE5GDJ2_kIA) | [Github](https://github.com/facebookresearch/esm)            | Transformer | UniRef            |
 | AlphaFold 2   | Proteomics | [Highly Accurate Protein Structure Prediction with AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) | [Github](https://github.com/google-deepmind/alphafold)       | -           | PDB + Uniclust30  |
@@ -121,7 +123,7 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 | Model  | Subfield            | Paper                                                        | Code | Base        | Pre-Training Data |
 | :----- | :------------------ | :----------------------------------------------------------- | :--- | :---------- | :---------------- |
 | OmniNA | Nucleotide sequence | [OmniNA: A Foundation Model for Nucleotide Sequences](https://www.biorxiv.org/content/10.1101/2024.01.14.575543.abstract) | -    | LLaMA       | NCBI              |
-| LaBraM | EEG                 | [Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI](https://openreview.net/forum?id=QzTpTRVtrP) | -    | Transformer | LaBraM*           |
+| LaBraM | EEG                 | [Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI](https://openreview.net/forum?id=QzTpTRVtrP) | -    | Transformer | *                 |
 
 
 
