@@ -4,7 +4,7 @@
 
 **[Project Page](https://data-centric-fm-healthcare.github.io/)** | **[Paper [arXiv]](https://arxiv.org/abs/2401.02458)**
 
-Last updated: 2024/02/19
+Last updated: 2024/02/22
 
 :pencil: **If you find this repo helps, please kindly cite our survey, thanks!**
 
@@ -120,10 +120,11 @@ A star (*) after the pre-training data shows that the authors constructed the da
 
 ### Other Models
 
-| Model  | Subfield            | Paper                                                        | Code | Base        | Pre-Training Data |
-| :----- | :------------------ | :----------------------------------------------------------- | :--- | :---------- | :---------------- |
-| OmniNA | Nucleotide sequence | [OmniNA: A Foundation Model for Nucleotide Sequences](https://www.biorxiv.org/content/10.1101/2024.01.14.575543.abstract) | -    | LLaMA       | NCBI              |
-| LaBraM | EEG                 | [Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI](https://openreview.net/forum?id=QzTpTRVtrP) | -    | Transformer | *                 |
+| Model     | Subfield            | Paper                                                        | Code | Base        | Pre-Training Data |
+| :-------- | :------------------ | :----------------------------------------------------------- | :--- | :---------- | :---------------- |
+| OmniNA    | Nucleotide sequence | [OmniNA: A Foundation Model for Nucleotide Sequences](https://www.biorxiv.org/content/10.1101/2024.01.14.575543.abstract) | -    | LLaMA       | NCBI              |
+| LaBraM    | EEG                 | [Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI](https://openreview.net/forum?id=QzTpTRVtrP) | -    | Transformer | *                 |
+| Neuro-GPT | EEG                 | [Neuro-GPT: Developing A Foundation Model for EEG](https://arxiv.org/abs/2311.03764) | -    | -           | TUH EEG           |
 
 
 
@@ -174,11 +175,12 @@ A star (*) after the pre-training data shows that the authors constructed the da
 
 ### Drug
 
-| Dataset (Paper)                                              | Description                                                  | Link                                           |
-| :----------------------------------------------------------- | :----------------------------------------------------------- | :--------------------------------------------- |
-| PubChem ([NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9825602/)) | A collection of 900+ sources of chemical information data    | [NIH](https://pubchem.ncbi.nlm.nih.gov/)       |
-| DrugBank ([NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753335/)) | A web-enabled structured database of molecular information about drugs | [Official site](https://www.drugbank.com/)     |
-| ChEMBL ([NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245175/)) | 20M bioactivity measurements for 2.4M distinct compounds and 15K protein targets | [Official site](https://www.ebi.ac.uk/chembl/) |
+| Dataset (Paper)                                              | Description                                                  | Link                                            |
+| :----------------------------------------------------------- | :----------------------------------------------------------- | :---------------------------------------------- |
+| DrugChat ([arXiv](https://arxiv.org/abs/2309.03907))         | 143,517 question-answer pairs covering 10,834 drug compounds, collected from PubChem and ChEMBL | [Github](https://github.com/UCSD-AI4H/drugchat) |
+| PubChem ([NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9825602/)) | A collection of 900+ sources of chemical information data    | [NIH](https://pubchem.ncbi.nlm.nih.gov/)        |
+| DrugBank ([NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753335/)) | A web-enabled structured database of molecular information about drugs | [Official site](https://www.drugbank.com/)      |
+| ChEMBL ([NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245175/)) | 20M bioactivity measurements for 2.4M distinct compounds and 15K protein targets | [Official site](https://www.ebi.ac.uk/chembl/)  |
 
 ### Mulit-Modal
 
