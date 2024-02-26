@@ -4,7 +4,7 @@
 
 **[Project Page](https://data-centric-fm-healthcare.github.io/)** | **[Paper [arXiv]](https://arxiv.org/abs/2401.02458)**
 
-Last updated: 2024/02/22
+Last updated: 2024/02/26
 
 :pencil: **If you find this repo helps, please kindly cite our survey, thanks!**
 
@@ -40,12 +40,14 @@ In this repository, we provide an up-to-date list of healthcare-related foundati
 
 ## Healthcare and Medical Foundation Models
 
-A star (*) after the pre-training data shows that the authors constructed the data with a number of sources.
+A star (*) after the pre-training data shows that the authors constructed the data with more than three sources.
 
 ### Language Models
 
 | Model               | Subfield    | Paper                                                        | Code                                                         | Base    | Pre-Training Data    |
 | :------------------ | :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :------ | :------------------- |
+| Me LLaMA            | Medicine    | [Me LLaMA: Foundation Large Language Models for Medical Applications](https://arxiv.org/abs/2402.12749) | [Github](https://github.com/BIDS-Xu-Lab/Me-LLaMA)            | LLaMA 2 | *                    |
+| BioMistral          | Biomedicine | [BioMistral: A Collection of Open-Source Pretrained Large Language Models for Medical Domains](https://arxiv.org/abs/2402.10373) | -                                                            | Mistral | PMC                  |
 | Meditron            | Medicine    | [Meditron-70B: Scaling Medical Pretraining for Large Language Models](https://arxiv.org/abs/2311.16079) | [Github](https://github.com/epfLLM/meditron)                 | LLaMA 2 | GAP-Replay*          |
 | Taiyi               | Biomedicine | [Taiyi: A Bilingual Fine-Tuned Large Language Model for Diverse Biomedical Tasks](https://arxiv.org/abs/2311.11608) | [Github](https://github.com/DUTIR-BioNLP/Taiyi-LLM)          | Qwen    | BigBio + CBLUE       |
 | BioMedGPT           | Biomedicine | [BioMedGPT: Open Multimodal Generative Pre-trained Transformer for BioMedicine](https://arxiv.org/abs/2308.09442) | [Github](https://github.com/PharMolix/OpenBioMed)            | LLaMA 2 | S2ORC                |
