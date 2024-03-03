@@ -4,7 +4,7 @@
 
 **[Project Page](https://data-centric-fm-healthcare.github.io/)** | **[Paper [arXiv]](https://arxiv.org/abs/2401.02458)**
 
-Last updated: 2024/02/26
+Last updated: 2024/03/03
 
 :pencil: **If you find this repo helps, please kindly cite our survey, thanks!**
 
@@ -44,28 +44,29 @@ A star (*) after the pre-training data shows that the authors constructed the da
 
 ### Language Models
 
-| Model               | Subfield    | Paper                                                        | Code                                                         | Base    | Pre-Training Data    |
-| :------------------ | :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :------ | :------------------- |
-| Me LLaMA            | Medicine    | [Me LLaMA: Foundation Large Language Models for Medical Applications](https://arxiv.org/abs/2402.12749) | [Github](https://github.com/BIDS-Xu-Lab/Me-LLaMA)            | LLaMA 2 | *                    |
-| BioMistral          | Biomedicine | [BioMistral: A Collection of Open-Source Pretrained Large Language Models for Medical Domains](https://arxiv.org/abs/2402.10373) | -                                                            | Mistral | PMC                  |
-| Meditron            | Medicine    | [Meditron-70B: Scaling Medical Pretraining for Large Language Models](https://arxiv.org/abs/2311.16079) | [Github](https://github.com/epfLLM/meditron)                 | LLaMA 2 | GAP-Replay*          |
-| Taiyi               | Biomedicine | [Taiyi: A Bilingual Fine-Tuned Large Language Model for Diverse Biomedical Tasks](https://arxiv.org/abs/2311.11608) | [Github](https://github.com/DUTIR-BioNLP/Taiyi-LLM)          | Qwen    | BigBio + CBLUE       |
-| BioMedGPT           | Biomedicine | [BioMedGPT: Open Multimodal Generative Pre-trained Transformer for BioMedicine](https://arxiv.org/abs/2308.09442) | [Github](https://github.com/PharMolix/OpenBioMed)            | LLaMA 2 | S2ORC                |
-| Clinical LLaMA-LoRA | Clinic      | [Parameter-Efficient Fine-Tuning of LLaMA for the Clinical Domain](https://arxiv.org/abs/2307.03042) | -                                                            | LLaMA   | MIMIC-IV             |
-| Med-PaLM 2          | Clinic      | [Towards Expert-Level Medical Question Answering with Large Language Models](https://arxiv.org/abs/2305.09617) | [Google](https://sites.research.google/med-palm/)            | PaLM 2  | MultiMedQA           |
-| PMC-LLaMA           | Medicine    | [PMC-LLaMA: Towards Building Open-source Language Models for Medicine](https://arxiv.org/abs/2304.14454) | [Github](https://github.com/chaoyi-wu/PMC-LLaMA)             | LLaMA   | MedC                 |
-| MedAlpaca           | Medicine    | [MedAlpaca -- An Open-Source Collection of Medical Conversational AI Models and Training Data](https://arxiv.org/abs/2304.08247) | [Github](https://github.com/kbressem/medAlpaca)              | LLaMA   | Medical Meadow       |
-| BenTsao (HuaTuo)    | Biomedicine | [HuaTuo: Tuning LLaMA Model with Chinese Medical Knowledge](https://arxiv.org/abs/2304.06975) | [Github](https://github.com/SCIR-HI/Huatuo-Llama-Med-Chinese) | LLaMA   | CMeKG                |
-| ChatDoctor          | Medicine    | [ChatDoctor: A Medical Chat Model Fine-Tuned on a Large Language Model Meta-AI (LLaMA) Using Medical Domain Knowledge](https://arxiv.org/abs/2303.14070) | [Github](https://github.com/Kent0n-Li/ChatDoctor)            | LLaMA   | HealthCareMagic*     |
-| Clinical-T5         | Clinic      | [Clinical-T5: Large Language Models Built Using Mimic Clinical Text](https://www.physionet.org/content/clinical-t5/1.0.0/) | [PhysioNet](https://www.physionet.org/content/clinical-t5/1.0.0/) | T5      | MIMIC-III + MIMIC-IV |
-| Med-PaLM            | Clinic      | [Large Language Models Encode Clinical Knowledge](https://arxiv.org/abs/2212.13138) | [Google](https://sites.research.google/med-palm)             | PaLM    | MultiMedQA           |
-| BioGPT              | Biomedicine | [BioGPT: Generative Pre-Trained Transformer for Biomedical Text Generation and Mining](https://academic.oup.com/bib/article-abstract/23/6/bbac409/6713511) | [Github](https://github.com/microsoft/BioGPT)                | GPT-2   | PubMed               |
-| BioLinkBERT         | Biomedicine | [Linkbert: Pretraining Language Models with Document Links](https://arxiv.org/abs/2203.15827) | [Github](https://github.com/michiyasunaga/LinkBERT)          | BERT    | PubMed               |
-| PubMedBERT          | Biomedicine | [Domain-Specific Language Model Pretraining for Biomedical Natural Language Processing](https://arxiv.org/abs/2007.15779) | [Microsoft](https://microsoft.github.io/BLURB/models.html)   | BERT    | PubMed               |
-| BioBERT             | Biomedicine | [BioBERT: A Pre-Trained Biomedical Language Representation Model for Biomedical Text Mining](https://academic.oup.com/bioinformatics/article-abstract/36/4/1234/5566506) | [Github](https://github.com/naver/biobert-pretrained)        | BERT    | PubMed + PMC         |
-| BlueBERT            | Biomedicine | [An Empirical Study of Multi-Task Learning on BERT for Biomedical Text Mining](https://arxiv.org/abs/2005.02799) | [Github](https://github.com/ncbi-nlp/BLUE_Benchmark)         | BERT    | PubMed + MIMIC-III   |
-| Clinical BERT       | Clinic      | [Publicly Available Clinical BERT Embeddings](https://arxiv.org/abs/1904.03323) | [Github](https://github.com/EmilyAlsentzer/clinicalBERT)     | BERT    | MIMIC-III            |
-| SciBERT             | Biomedicine | [SciBERT: A Pretrained Language Model for Scientific Text](https://arxiv.org/abs/1903.10676) | [Github](https://github.com/allenai/scibert)                 | BERT    | Semantic Scholar     |
+| Model               | Subfield    | Paper                                                        | Code                                                         | Base     | Pre-Training Data    |
+| :------------------ | :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :------- | :------------------- |
+| Me LLaMA            | Medicine    | [Me LLaMA: Foundation Large Language Models for Medical Applications](https://arxiv.org/abs/2402.12749) | [Github](https://github.com/BIDS-Xu-Lab/Me-LLaMA)            | LLaMA 2  | *                    |
+| BioMistral          | Biomedicine | [BioMistral: A Collection of Open-Source Pretrained Large Language Models for Medical Domains](https://arxiv.org/abs/2402.10373) | -                                                            | Mistral  | PMC                  |
+| PULSE               | Medicine    | -                                                            | [Github](https://github.com/openmedlab/PULSE)                | InternLM | *                    |
+| Meditron            | Medicine    | [Meditron-70B: Scaling Medical Pretraining for Large Language Models](https://arxiv.org/abs/2311.16079) | [Github](https://github.com/epfLLM/meditron)                 | LLaMA 2  | GAP-Replay*          |
+| Taiyi               | Biomedicine | [Taiyi: A Bilingual Fine-Tuned Large Language Model for Diverse Biomedical Tasks](https://arxiv.org/abs/2311.11608) | [Github](https://github.com/DUTIR-BioNLP/Taiyi-LLM)          | Qwen     | BigBio + CBLUE       |
+| BioMedGPT           | Biomedicine | [BioMedGPT: Open Multimodal Generative Pre-trained Transformer for BioMedicine](https://arxiv.org/abs/2308.09442) | [Github](https://github.com/PharMolix/OpenBioMed)            | LLaMA 2  | S2ORC                |
+| Clinical LLaMA-LoRA | Clinic      | [Parameter-Efficient Fine-Tuning of LLaMA for the Clinical Domain](https://arxiv.org/abs/2307.03042) | -                                                            | LLaMA    | MIMIC-IV             |
+| Med-PaLM 2          | Clinic      | [Towards Expert-Level Medical Question Answering with Large Language Models](https://arxiv.org/abs/2305.09617) | [Google](https://sites.research.google/med-palm/)            | PaLM 2   | MultiMedQA           |
+| PMC-LLaMA           | Medicine    | [PMC-LLaMA: Towards Building Open-source Language Models for Medicine](https://arxiv.org/abs/2304.14454) | [Github](https://github.com/chaoyi-wu/PMC-LLaMA)             | LLaMA    | MedC                 |
+| MedAlpaca           | Medicine    | [MedAlpaca -- An Open-Source Collection of Medical Conversational AI Models and Training Data](https://arxiv.org/abs/2304.08247) | [Github](https://github.com/kbressem/medAlpaca)              | LLaMA    | Medical Meadow       |
+| BenTsao (HuaTuo)    | Biomedicine | [HuaTuo: Tuning LLaMA Model with Chinese Medical Knowledge](https://arxiv.org/abs/2304.06975) | [Github](https://github.com/SCIR-HI/Huatuo-Llama-Med-Chinese) | LLaMA    | CMeKG                |
+| ChatDoctor          | Medicine    | [ChatDoctor: A Medical Chat Model Fine-Tuned on a Large Language Model Meta-AI (LLaMA) Using Medical Domain Knowledge](https://arxiv.org/abs/2303.14070) | [Github](https://github.com/Kent0n-Li/ChatDoctor)            | LLaMA    | HealthCareMagic*     |
+| Clinical-T5         | Clinic      | [Clinical-T5: Large Language Models Built Using Mimic Clinical Text](https://www.physionet.org/content/clinical-t5/1.0.0/) | [PhysioNet](https://www.physionet.org/content/clinical-t5/1.0.0/) | T5       | MIMIC-III + MIMIC-IV |
+| Med-PaLM            | Clinic      | [Large Language Models Encode Clinical Knowledge](https://arxiv.org/abs/2212.13138) | [Google](https://sites.research.google/med-palm)             | PaLM     | MultiMedQA           |
+| BioGPT              | Biomedicine | [BioGPT: Generative Pre-Trained Transformer for Biomedical Text Generation and Mining](https://academic.oup.com/bib/article-abstract/23/6/bbac409/6713511) | [Github](https://github.com/microsoft/BioGPT)                | GPT-2    | PubMed               |
+| BioLinkBERT         | Biomedicine | [Linkbert: Pretraining Language Models with Document Links](https://arxiv.org/abs/2203.15827) | [Github](https://github.com/michiyasunaga/LinkBERT)          | BERT     | PubMed               |
+| PubMedBERT          | Biomedicine | [Domain-Specific Language Model Pretraining for Biomedical Natural Language Processing](https://arxiv.org/abs/2007.15779) | [Microsoft](https://microsoft.github.io/BLURB/models.html)   | BERT     | PubMed               |
+| BioBERT             | Biomedicine | [BioBERT: A Pre-Trained Biomedical Language Representation Model for Biomedical Text Mining](https://academic.oup.com/bioinformatics/article-abstract/36/4/1234/5566506) | [Github](https://github.com/naver/biobert-pretrained)        | BERT     | PubMed + PMC         |
+| BlueBERT            | Biomedicine | [An Empirical Study of Multi-Task Learning on BERT for Biomedical Text Mining](https://arxiv.org/abs/2005.02799) | [Github](https://github.com/ncbi-nlp/BLUE_Benchmark)         | BERT     | PubMed + MIMIC-III   |
+| Clinical BERT       | Clinic      | [Publicly Available Clinical BERT Embeddings](https://arxiv.org/abs/1904.03323) | [Github](https://github.com/EmilyAlsentzer/clinicalBERT)     | BERT     | MIMIC-III            |
+| SciBERT             | Biomedicine | [SciBERT: A Pretrained Language Model for Scientific Text](https://arxiv.org/abs/1903.10676) | [Github](https://github.com/allenai/scibert)                 | BERT     | Semantic Scholar     |
 
 ### Vision Models
 
@@ -188,6 +189,7 @@ A star (*) after the pre-training data shows that the authors constructed the da
 
 | Dataset (Paper)                                              | Description                                                  | Link                                                         |
 | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| OmniMedVQA ([arXiv](https://arxiv.org/abs/2402.09181))       | 131,813 question-answering items with 120,530 images from 12 modalities and 26 human anatomical regions, collected from 75 medical datasets | -                                                            |
 | SAT-DS ([arXiv](https://arxiv.org/abs/2312.17183))           | 11,462 scans with 142,254 segmentation annotations spanning 8 human body regions from 31 medical image segmentation datasets, together with domain knowledge from e-Anatomy and UMLS | [Github](https://github.com/zhaoziheng/SAT)                  |
 | PathChatInstruct ([arXiv](https://arxiv.org/abs/2312.07814)) | 257,004 instructions of pathology-specific queries with image and text | -                                                            |
 | Chi-Med-VL ([arXiv](https://arxiv.org/abs/2310.17956))       | 580,014 image-text pairs and 469,441 question-answer pairs for general healthcare in Chinese | [Github](https://github.com/williamliujl/Qilin-Med-VL)       |
