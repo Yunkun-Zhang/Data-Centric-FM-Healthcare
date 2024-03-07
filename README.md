@@ -4,7 +4,7 @@
 
 **[Project Page](https://data-centric-fm-healthcare.github.io/)** | **[Paper [arXiv]](https://arxiv.org/abs/2401.02458)**
 
-Last updated: 2024/03/03
+Last updated: 2024/03/07
 
 :pencil: **If you find this repo helps, please kindly cite our survey, thanks!**
 
@@ -47,6 +47,7 @@ A star (*) after the pre-training data shows that the authors constructed the da
 | Model               | Subfield    | Paper                                                        | Code                                                         | Base       | Pre-Training Data    |
 | :------------------ | :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :--------- | :------------------- |
 | MMedLM 2            | Medicine    | [Towards Building Multilingual Language Model for Medicine](https://arxiv.org/abs/2402.13963) | [Github](https://github.com/MAGIC-AI4Med/MMedLM)             | InternLM 2 | MMedC*               |
+| BiMediX             | Medicine    | [BiMediX: Bilingual Medical Mixture of Experts LLM](https://arxiv.org/abs/2402.13253) | [Github](https://github.com/mbzuai-oryx/BiMediX)             | Mixtral    | BiMed1.3M*           |
 | Me LLaMA            | Medicine    | [Me LLaMA: Foundation Large Language Models for Medical Applications](https://arxiv.org/abs/2402.12749) | [Github](https://github.com/BIDS-Xu-Lab/Me-LLaMA)            | LLaMA 2    | *                    |
 | BioMistral          | Biomedicine | [BioMistral: A Collection of Open-Source Pretrained Large Language Models for Medical Domains](https://arxiv.org/abs/2402.10373) | -                                                            | Mistral    | PMC                  |
 | PULSE               | Medicine    | -                                                            | [Github](https://github.com/openmedlab/PULSE)                | InternLM   | *                    |
@@ -71,16 +72,17 @@ A star (*) after the pre-training data shows that the authors constructed the da
 
 ### Vision Models
 
-| Model      | Subfield    | Paper                                                        | Code                                                         | Base   | Pre-Training Data   |
-| :--------- | :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----- | :------------------ |
-| VISION-MAE | Radiology   | [VISION-MAE: A Foundation Model for Medical Image Segmentation and Classification](https://arxiv.org/abs/2402.01034) | -                                                            | MAE    | *                   |
-| RudolfV    | Pathology   | [RudolfV: A Foundation Model by Pathologists for Pathologists](https://arxiv.org/abs/2401.04079) | -                                                            | DINOv2 | *                   |
-| UNI        | Pathology   | [A General-Purpose Self-Supervised Model for Computational Pathology](https://arxiv.org/abs/2308.15474) | -                                                            | DINOv2 | Mass-100K           |
-| REMEDIS    | Radiology   | [Robust and Data-Efficient Generalization of Self-Supervised Machine Learning for Diagnostic Imaging](https://idp.nature.com/authorize/casa?redirect_uri=https://www.nature.com/articles/s41551-023-01049-7&casa_token=jsWqfcJssI0AAAAA:zt3n5PYal2WyePCxeKXW4q4x0gmqtWQYHCLqXbLQhK1ERML3pgp68Q7GBN1wVK9MYP5iyxBzlsaD1Tygag) | [Github](https://github.com/google-research/medical-ai-research-foundations) | SimCLR | MIMIC-IV + CheXpert |
-| Virchow    | Pathology   | [Virchow: A Million-Slide Digital Pathology Foundation Model](https://arxiv.org/abs/2309.07778) | -                                                            | DINOv2 | *                   |
-| RETFound   | Retinopathy | [A Foundation Model for Generalizable Disease Detection from Retinal Images](https://www.nature.com/articles/s41586-023-06555-x) | [Github](https://github.com/rmaphoh/RETFound_MAE)            | MAE    | *                   |
-| CTransPath | Pathology   | [Transformer-Based Unsupervised Contrastive Learning for Histopathological Image Classification](https://www.sciencedirect.com/science/article/pii/S1361841522002043?casa_token=YBbUxnv_qsAAAAAA:YrgecQ6ecLad4Bj3JfGl0SZvjRgSQBZ27KYtpH6jU3vy6j-8hGrnQzbVFWCg0vH9Pn7r5H1Cxw) | [Github](https://github.com/Xiyue-Wang/TransPath)            | -      | TCGA + PAIP         |
-| HIPT       | Pathology   | [Scaling Vision Transformers to Gigapixel Images via Hierarchical Self-Supervised Learning](https://openaccess.thecvf.com/content/CVPR2022/html/Chen_Scaling_Vision_Transformers_to_Gigapixel_Images_via_Hierarchical_Self-Supervised_Learning_CVPR_2022_paper.html?trk=public_post_comment-text) | [Github](https://github.com/mahmoodlab/HIPT)                 | DINO   | TCGA                |
+| Model      | Subfield    | Paper                                                        | Code                                                         | Base    | Pre-Training Data   |
+| :--------- | :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :------ | :------------------ |
+| VISION-MAE | Radiology   | [VISION-MAE: A Foundation Model for Medical Image Segmentation and Classification](https://arxiv.org/abs/2402.01034) | -                                                            | MAE     | *                   |
+| RudolfV    | Pathology   | [RudolfV: A Foundation Model by Pathologists for Pathologists](https://arxiv.org/abs/2401.04079) | -                                                            | DINOv2  | *                   |
+| PathoDuet  | Pathology   | [PathoDuet: Foundation Models for Pathological Slide Analysis of H&E and ICH Stains](https://arxiv.org/abs/2312.09894) | [Github](https://github.com/openmedlab/PathoDuet)            | MoCo v3 | TCGA + HyReCo + BCI |
+| UNI        | Pathology   | [A General-Purpose Self-Supervised Model for Computational Pathology](https://arxiv.org/abs/2308.15474) | -                                                            | DINOv2  | Mass-100K           |
+| REMEDIS    | Radiology   | [Robust and Data-Efficient Generalization of Self-Supervised Machine Learning for Diagnostic Imaging](https://idp.nature.com/authorize/casa?redirect_uri=https://www.nature.com/articles/s41551-023-01049-7&casa_token=jsWqfcJssI0AAAAA:zt3n5PYal2WyePCxeKXW4q4x0gmqtWQYHCLqXbLQhK1ERML3pgp68Q7GBN1wVK9MYP5iyxBzlsaD1Tygag) | [Github](https://github.com/google-research/medical-ai-research-foundations) | SimCLR  | MIMIC-IV + CheXpert |
+| Virchow    | Pathology   | [Virchow: A Million-Slide Digital Pathology Foundation Model](https://arxiv.org/abs/2309.07778) | -                                                            | DINOv2  | *                   |
+| RETFound   | Retinopathy | [A Foundation Model for Generalizable Disease Detection from Retinal Images](https://www.nature.com/articles/s41586-023-06555-x) | [Github](https://github.com/rmaphoh/RETFound_MAE)            | MAE     | *                   |
+| CTransPath | Pathology   | [Transformer-Based Unsupervised Contrastive Learning for Histopathological Image Classification](https://www.sciencedirect.com/science/article/pii/S1361841522002043?casa_token=YBbUxnv_qsAAAAAA:YrgecQ6ecLad4Bj3JfGl0SZvjRgSQBZ27KYtpH6jU3vy6j-8hGrnQzbVFWCg0vH9Pn7r5H1Cxw) | [Github](https://github.com/Xiyue-Wang/TransPath)            | -       | TCGA + PAIP         |
+| HIPT       | Pathology   | [Scaling Vision Transformers to Gigapixel Images via Hierarchical Self-Supervised Learning](https://openaccess.thecvf.com/content/CVPR2022/html/Chen_Scaling_Vision_Transformers_to_Gigapixel_Images_via_Hierarchical_Self-Supervised_Learning_CVPR_2022_paper.html?trk=public_post_comment-text) | [Github](https://github.com/mahmoodlab/HIPT)                 | DINO    | TCGA                |
 
 ### Vision-Language Models
 
@@ -139,6 +141,7 @@ A star (*) after the pre-training data shows that the authors constructed the da
 | Dataset (Paper)                                              | Description                                                  | Link                                                         |
 | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
 | MMedBench ([arXiv](https://arxiv.org/abs/2402.13963))        | A multilingual medical QA benchmark, where questions are categorized into 21 topics | [Github](https://github.com/MAGIC-AI4Med/MMedLM)             |
+| BiMed1.3M ([arXiv](https://arxiv.org/abs/2402.13963))        | An English and Arabic bilingual dataset of 1.3M samples of medical QA and chat | [Github](https://github.com/mbzuai-oryx/BiMediX)             |
 | MMedC ([arXiv](https://arxiv.org/abs/2402.13963))            | A multilingual medical corpus containing over 25.5B tokens   | [Github](https://github.com/MAGIC-AI4Med/MMedLM)             |
 | GAP-Replay ([arXiv](https://arxiv.org/abs/2311.16079))       | 48.1B tokens from 4 medical corpora including guidelines, abstracts, papers, and replay | [Github](https://github.com/epfLLM/meditron)                 |
 | Huatuo-26M ([arXiv](https://arxiv.org/abs/2305.01526))       | 26M Chinese medical QA pairs                                 | [Github](https://github.com/FreedomIntelligence/Huatuo-26M)  |
