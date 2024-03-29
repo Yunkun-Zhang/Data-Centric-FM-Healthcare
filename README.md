@@ -4,7 +4,7 @@
 
 **[Project Page](https://data-centric-fm-healthcare.github.io/)** | **[Paper [arXiv]](https://arxiv.org/abs/2401.02458)**
 
-Last updated: 2024/03/07
+Last updated: 2024/03/29
 
 :pencil: **If you find this repo helps, please kindly cite our survey, thanks!**
 
@@ -74,6 +74,7 @@ A star (*) after the pre-training data shows that the authors constructed the da
 
 | Model      | Subfield    | Paper                                                        | Code                                                         | Base    | Pre-Training Data   |
 | :--------- | :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :------ | :------------------ |
+| (No name)  | Radiology   | [Foundation Model for Cancer Imaging Biomarkers](https://www.nature.com/articles/s42256-024-00807-9#Sec11) | [Github](https://github.com/AIM-Harvard/foundation-cancer-image-biomarker) | SimCLR  | *                   |
 | VISION-MAE | Radiology   | [VISION-MAE: A Foundation Model for Medical Image Segmentation and Classification](https://arxiv.org/abs/2402.01034) | -                                                            | MAE     | *                   |
 | RudolfV    | Pathology   | [RudolfV: A Foundation Model by Pathologists for Pathologists](https://arxiv.org/abs/2401.04079) | -                                                            | DINOv2  | *                   |
 | PathoDuet  | Pathology   | [PathoDuet: Foundation Models for Pathological Slide Analysis of H&E and ICH Stains](https://arxiv.org/abs/2312.09894) | [Github](https://github.com/openmedlab/PathoDuet)            | MoCo v3 | TCGA + HyReCo + BCI |
@@ -99,7 +100,7 @@ A star (*) after the pre-training data shows that the authors constructed the da
 | RadFM        | Radiology   | [Towards Generalist Foundation Model for Radiology](https://arxiv.org/abs/2308.02463) | [Github](https://github.com/chaoyi-wu/RadFM)                 | -                | MedMD*                              |
 | KAD          | Radiology   | [Knowledge-Enhanced Visual-Language Pre-Training on Chest Radiology Images](https://www.nature.com/articles/s41467-023-40260-7) | [Github](https://github.com/xiaoman-zhang/KAD)               | CLIP             | MIMIC-CXR + UMLS                    |
 | Med-Flamingo | Medicine    | [Med-Flamingo: A Multimodal Medical Few-Shot Learner](https://proceedings.mlr.press/v225/moor23a.html) | [Github](https://github.com/snap-stanford/med-flamingo)      | Flamingo         | MTB + PMC-OA                        |
-| CONCH        | Pathology   | [Towards a Visual-Language Foundation Model for Computational Pathology](https://arxiv.org/abs/2307.12914) | -                                                            | CoCa             | PubMed + PMC                        |
+| CONCH        | Pathology   | [A Visual-Language Foundation Model for Computational Pathology](https://www.nature.com/articles/s41591-024-02856-4) | [Github](https://github.com/mahmoodlab/CONCH)                | CoCa             | PubMed + PMC                        |
 | QuiltNet     | Pathology   | [Quilt-1M: One Million Image-Text Pairs for Histopathology](https://arxiv.org/abs/2306.11207) | [Github](https://github.com/wisdomikezogwo/quilt1m)          | CLIP             | Quilt-1M*                           |
 | PathAsst     | Pathology   | [PathAsst: Redefining Pathology through Generative Foundation AI Assistant for Pathology](https://arxiv.org/abs/2305.15072) | [Github](https://github.com/superjamessyx/Generative-Foundation-AI-Assistant-for-Pathology) | CLIP             | PathCap + PathInstruct*             |
 | PLIP         | Pathology   | [A Visual-Language Foundation Model for Pathology Image Analysis Using Medical Twitter](https://idp.nature.com/authorize/casa?redirect_uri=https://www.nature.com/articles/s41591-023-02504-3&casa_token=cnEpAWMo9RIAAAAA:_v3_yKPcr_afGn_MCirdOLLHyC63vSFVuvqu2sM4lnxJaZVQF7gmZsEjP2-W-CTQ9Xr2OVOpQEjgdIf9Jw) | [Huggingface](https://huggingface.co/spaces/vinid/webplip)   | CLIP             | OpenPath*                           |
@@ -203,6 +204,7 @@ A star (*) after the pre-training data shows that the authors constructed the da
 | OpenPath ([Nature](https://www.nature.com/articles/s41591-023-02504-3)) | 208,414 pathology images paired with natural language descriptions | [Huggingface](https://huggingface.co/spaces/vinid/webplip)   |
 | Quilt-1M ([arXiv](https://arxiv.org/abs/2306.11207))         | 1M image-text pairs for histopathology                       | [Github](https://github.com/wisdomikezogwo/quilt1m)          |
 | Med-MMHL ([arXiv](https://arxiv.org/abs/2306.08871))         | Human- and LLM-generated misinformation detection dataset    | [Github](https://github.com/styxsys0927/Med-MMHL)            |
+| Mol-Instructions ([arXiv](https://arxiv.org/abs/2306.08018)) | 148K molecule-oriented, 505K protein-oriented, and biomolecular text instructions | [Huggingface](https://huggingface.co/datasets/zjunlp/Mol-Instructions) |
 | PathInstruct ([arXiv](https://arxiv.org/abs/2305.15072))     | 180K samples of LLM-generated instruction-following data     | [Github](https://github.com/superjamessyx/Generative-Foundation-AI-Assistant-for-Pathology) |
 | PMC-VQA ([arXiv](https://arxiv.org/abs/2305.10415))          | 227K VQA pairs of 149K images of various modalities or diseases | [Github](https://github.com/xiaoman-zhang/PMC-VQA)           |
 | PMC-OA ([arXiv](https://arxiv.org/abs/2303.07240))           | 1.6M fine-grained biomedical image-text pairs                | [Github](https://github.com/WeixiongLin/PMC-CLIP)            |
