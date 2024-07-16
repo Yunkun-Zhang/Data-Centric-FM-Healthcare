@@ -4,7 +4,7 @@
 
 **[Project Page](https://data-centric-fm-healthcare.github.io/)** | **[Paper [arXiv]](https://arxiv.org/abs/2401.02458)**
 
-Last updated: 2024/07/15
+Last updated: 2024/07/16
 
 :pencil: **If you find this repo helps, please kindly cite our survey, thanks!**
 
@@ -120,15 +120,15 @@ A star (*) after the pre-training data shows that the authors constructed the da
 
 ### Protein and Molecule Models
 
-| Model         | Subfield   | Paper                                                                                                                                                                                                                                                                        | Code                                                                | Base        | Pre-Training Data |
-|:------------- |:---------- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------- |:----------- |:----------------- |
-| nach0         | Molecules  | [nach0: Multimodal Natural and Chemical Languages Foundation Model]                                                                                                                                                                                                          | [Github](https://github.com/insilicomedicine/nach0)                 | T5          | *                 |
-| MoleculeSTM   | Drug       | [Multi-modal Molecule Structure-text Model for Text-based Retrieval and Editing](https://www.nature.com/articles/s42256-023-00759-6)                                                                                                                                         | [Github](https://github.com/chao1224/MoleculeSTM)                   | CLIP        | PubChem           |
-| AlphaMissense | Proteomics | [Accurate Proteome-Wide Missense Variant Effect Prediction with AlphaMissense](https://www.science.org/doi/abs/10.1126/science.adg7492)                                                                                                                                      | [Github](https://github.com/deepmind/alphamissense)                 | AlphaFold   | PDB + UniRef      |
-| GET           | Genomics   | [GET: A Foundation Model of Transcription across Human Cell Types](https://www.biorxiv.org/content/10.1101/2023.09.24.559168.abstract)                                                                                                                                       | [Huggingface](https://huggingface.co/spaces/get-foundation/getdemo) | Transformer | *                 |
-| GIT-Mol       | Molecules  | [GIT-Mol: A Multi-Modal Large Language Model for Molecular Science with Graph, Image, and Text](https://www.sciencedirect.com/science/article/pii/S0010482524001574?casa_token=Dkncjjih45UAAAAA:wJyM-lr4S-KMG2iqc3YkRpuHaMhJzFidXKt0PCwgJLjTQuFLN-DVA4t6CE9pTtuadXKTAe7jdeI) | [Github](https://github.com/AI-HPC-Research-Team/GIT-Mol)           | T5 + BLIP-2 | PubChem           |
-| ESM-2         | Proteomics | [Evolutionary-Scale Prediction of Atomic-Level Protein Structure with a Language Model](https://www.science.org/doi/abs/10.1126/science.ade2574?casa_token=Qvgo8ZWhDYwAAAAA:SbKFf-TJQHVPNS_peeNUOoKxnsYgvp-0PMaPG1Oh5zGLrs1zdoSJBTe_qDl4n9loA7-RFE5GDJ2_kIA)                 | [Github](https://github.com/facebookresearch/esm)                   | Transformer | UniRef            |
-| AlphaFold 2   | Proteomics | [Highly Accurate Protein Structure Prediction with AlphaFold](https://www.nature.com/articles/s41586-021-03819-2)                                                                                                                                                            | [Github](https://github.com/google-deepmind/alphafold)              | -           | PDB + Uniclust30  |
+| Model         | Subfield   | Paper                                                        | Code                                                         | Base        | Pre-Training Data |
+| :------------ | :--------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :---------- | :---------------- |
+| nach0         | Molecules  | [nach0: Multimodal Natural and Chemical Languages Foundation Model](https://pubs.rsc.org/en/content/articlehtml/2024/sc/d4sc00966e) | [Github](https://github.com/insilicomedicine/nach0)          | T5          | *                 |
+| MoleculeSTM   | Drug       | [Multi-modal Molecule Structure-text Model for Text-based Retrieval and Editing](https://www.nature.com/articles/s42256-023-00759-6) | [Github](https://github.com/chao1224/MoleculeSTM)            | CLIP        | PubChem           |
+| AlphaMissense | Proteomics | [Accurate Proteome-Wide Missense Variant Effect Prediction with AlphaMissense](https://www.science.org/doi/abs/10.1126/science.adg7492) | [Github](https://github.com/deepmind/alphamissense)          | AlphaFold   | PDB + UniRef      |
+| GET           | Genomics   | [GET: A Foundation Model of Transcription across Human Cell Types](https://www.biorxiv.org/content/10.1101/2023.09.24.559168.abstract) | [Huggingface](https://huggingface.co/spaces/get-foundation/getdemo) | Transformer | *                 |
+| GIT-Mol       | Molecules  | [GIT-Mol: A Multi-Modal Large Language Model for Molecular Science with Graph, Image, and Text](https://www.sciencedirect.com/science/article/pii/S0010482524001574?casa_token=Dkncjjih45UAAAAA:wJyM-lr4S-KMG2iqc3YkRpuHaMhJzFidXKt0PCwgJLjTQuFLN-DVA4t6CE9pTtuadXKTAe7jdeI) | [Github](https://github.com/AI-HPC-Research-Team/GIT-Mol)    | T5 + BLIP-2 | PubChem           |
+| ESM-2         | Proteomics | [Evolutionary-Scale Prediction of Atomic-Level Protein Structure with a Language Model](https://www.science.org/doi/abs/10.1126/science.ade2574?casa_token=Qvgo8ZWhDYwAAAAA:SbKFf-TJQHVPNS_peeNUOoKxnsYgvp-0PMaPG1Oh5zGLrs1zdoSJBTe_qDl4n9loA7-RFE5GDJ2_kIA) | [Github](https://github.com/facebookresearch/esm)            | Transformer | UniRef            |
+| AlphaFold 2   | Proteomics | [Highly Accurate Protein Structure Prediction with AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) | [Github](https://github.com/google-deepmind/alphafold)       | -           | PDB + Uniclust30  |
 
 ### Other Models
 
